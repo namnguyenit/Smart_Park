@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parkingSpots>
+                          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <spotID>1</spotID>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Gia>10000</Gia>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <type>xeThoso</type>
+                                                  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </parkingSpot>
+                        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <spotID>2</spotID>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Gia>20000</Gia>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <type>xeGanmay</type>
+                                              
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </parkingSpot>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <spotID>3</spotID>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Gia>20000</Gia>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <type>xeGanmay</type>
+                                          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </parkingSpot>
+                    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <spotID>4</spotID>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <Gia>30000</Gia>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <type>xeOto</type>
+                                      
+  
+  
+  
+  
+  
+  
+  
+  
+  </parkingSpot>
+                  
+  
+  
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <spotID>5</spotID>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <Gia>30000</Gia>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <type>xeOto</type>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  </parkingSpot>
+                
+  
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                                
+    
+    
+    
+    
+    
+    
+    <spotID>6</spotID>
+                                
+    
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                                
+    
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                                
+    
+    
+    
+    
+    
+    
+    <Gia>30000</Gia>
+                                
+    
+    
+    
+    
+    
+    
+    <type>xeOto</type>
+                              
+  
+  
+  
+  
+  
+  
+  </parkingSpot>
+              
+  
+  
+  
+  
+  
+  
+  <parkingSpot>
+                            
+    
+    
+    
+    
+    
+    <spotID>7</spotID>
+                            
+    
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                            
+    
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                            
+    
+    
+    
+    
+    
+    <Gia>40000</Gia>
+                            
+    
+    
+    
+    
+    
+    <type>xeChuyendung</type>
+                          
+  
+  
+  
+  
+  
+  </parkingSpot>
+            
+  
+  
+  
+  
+  
+  <parkingSpot>
+                        
+    
+    
+    
+    
+    <spotID>8</spotID>
+                        
+    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                        
+    
+    
+    
+    
+    <chuXe>null</chuXe>
+                        
+    
+    
+    
+    
+    <Gia>40000</Gia>
+                        
+    
+    
+    
+    
+    <type>xeChuyendung</type>
+                      
+  
+  
+  
+  
+  </parkingSpot>
+          
+  
+  
+  
+  
+  <parkingSpot>
+                    
+    
+    
+    
+    <spotID>9</spotID>
+                    
+    
+    
+    
+    <tinhTrang>false</tinhTrang>
+                    
+    
+    
+    
+    <chuXe>null</chuXe>
+                    
+    
+    
+    
+    <Gia>40000</Gia>
+                    
+    
+    
+    
+    <type>xeChuyendung</type>
+                  
+  
+  
+  
+  </parkingSpot>
+        
+  
+  
+  
+  <parkingSpot>
+                
+    
+    
+    <spotID>10</spotID>
+                
+    
+    
+    <tinhTrang>false</tinhTrang>
+                
+    
+    
+    <chuXe>null</chuXe>
+                
+    
+    
+    <Gia>40000</Gia>
+                
+    
+    
+    <type>xeChuyendung</type>
+              
+  
+  
+  </parkingSpot>
+      
+  
+  
+  <parkingSpot>
+            
+    
+    <spotID>11</spotID>
+            
+    
+    <tinhTrang>false</tinhTrang>
+            
+    
+    <chuXe>null</chuXe>
+            
+    
+    <Gia>2</Gia>
+            
+    
+    <type>xeThoso</type>
+          
+  
+  </parkingSpot>
+    
+  
+  <parkingSpot>
+        
+    <spotID>12</spotID>
+        
+    <tinhTrang>false</tinhTrang>
+        
+    <chuXe>null</chuXe>
+        
+    <Gia>2232424</Gia>
+        
+    <type>xeGanmay</type>
+      
+  </parkingSpot>
+  
+  <parkingSpot>
+    <spotID>13</spotID>
+    <tinhTrang>false</tinhTrang>
+    <chuXe>null</chuXe>
+    <Gia>2232424</Gia>
+    <type>xeGanmay</type>
+  </parkingSpot>
+</parkingSpots>
