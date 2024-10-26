@@ -30,7 +30,15 @@ import com.mycompany.quanlybaidoxe.giaodienAdmin.loadTable;
 import com.mycompany.quanlybaidoxe.giaodienAdmin.parkingSpot;
 import com.mycompany.quanlybaidoxe.quanlydoxe.BackgroundPanel;
 import com.mycompany.quanlybaidoxe.quanlydoxe.Giaodienchinh;
+import com.mycompany.quanlybaidoxe.quanlydoxe.MenuItem;
+import com.mycompany.quanlybaidoxe.quanlydoxe.User;
+import java.awt.Dimension;
 import java.util.ArrayList;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JComponent;
+import javax.swing.SwingConstants;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -70,6 +78,7 @@ public class admin extends javax.swing.JFrame {
     private String bsx="";
     private String tkdn="";
     private int sl=0;
+    private MenuItem selectedMenuItem = null;
     
     //
     
@@ -109,7 +118,158 @@ public class admin extends javax.swing.JFrame {
             tableModel4.addRow(rowData);
         }
     }
+    private void customInit() {
+    MenuItem menuItem1 = new MenuItem("Thông tin bãi đỗ xe");
+    MenuItem menuItem2 = new MenuItem("Thêm và xoá bãi");
+    MenuItem menuItem3 = new MenuItem("Thông tin người dùng");
+    MenuItem menuItem6 = new MenuItem("EXIT");
     
+    
+    
+    // Sử dụng phương thức setMenuItemFont để thay đổi font của MenuItem
+    menuItem1.setMenuItemFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 20));
+    menuItem2.setMenuItemFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 20));
+    menuItem3.setMenuItemFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 20));
+    
+    
+    
+//    menuItem4.setFont(new java.awt.Font("Arial", java.awt.Font.PLAIN, 20)); // JLabel sử dụng setFont như bình thường
+    
+    menuItem6.setMenuItemFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 20));
+    
+    menuItem1.setForeground(new Color(44, 62, 80));
+    menuItem2.setForeground(new Color(44, 62, 80));
+    menuItem3.setForeground(new Color(44, 62, 80)); // Đặt màu cho menuItem3
+    
+    
+    menuItem6.setForeground(new Color(44, 62, 80));
+    
+    JLabel menuItem7 = new JLabel("SmartPark");
+    menuItem7.setFont(new java.awt.Font("Verdana", java.awt.Font.PLAIN, 40));
+    menuItem7.setForeground(new Color(255, 255, 255)); // Màu chữ
+    menuItem7.setOpaque(true);
+    menuItem7.setBackground(new Color(44, 62, 80)); // Màu nền giống như nút
+    menuItem7.setPreferredSize(new Dimension(200, 50)); // Kích thước giống như các nút
+    menuItem7.setHorizontalAlignment(SwingConstants.CENTER); // Căn giữa chữ
+    menuItem7.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); // Khoảng cách
+    
+    Dimension itemSize = new Dimension(230, 50);
+    // Đặt ảnh n.png vào JLabel
+//    ImageIcon icon = new ImageIcon(getClass().getResource(""));//ảnh
+//    menuItem4.setIcon(icon);
+//    menuItem4.setHorizontalTextPosition(SwingConstants.RIGHT); // Chữ bên phải ảnh
+//    menuItem4.setIconTextGap(10); // Khoảng cách giữa ảnh và chữ
+//    menuItem4.setHorizontalAlignment(SwingConstants.CENTER);
+//    menuItem4.setPreferredSize(new Dimension(200, 50)); // Kích thước giống như các nút
+//    menuItem4.setOpaque(true);
+//    menuItem4.setBackground(new Color(108, 126, 225)); // Màu nền giống như nút
+//    menuItem4.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); // Khoảng cách
+    
+
+//    ImageIcon icon = new ImageIcon(getClass().getResource("/images/icon.png"));
+//    menuItem3.setIcon(icon); 
+
+    menuItem1.setPreferredSize(itemSize);
+//    menuItem1.setMaximumSize(itemSize);
+    menuItem1.setMinimumSize(itemSize);
+
+    menuItem2.setPreferredSize(itemSize);
+   // menuItem2.setMaximumSize(itemSize);
+    menuItem2.setMinimumSize(itemSize);
+
+    menuItem3.setPreferredSize(itemSize);
+   // menuItem3.setMaximumSize(itemSize);
+    menuItem3.setMinimumSize(itemSize);
+
+//    menuItem4.setPreferredSize(itemSize);
+//    menuItem4.setMaximumSize(itemSize);
+//    menuItem4.setMinimumSize(itemSize);
+    
+   // menuItem4.setMaximumSize(itemSize);
+    
+    
+    
+    //menuItem5.setMaximumSize(itemSize);
+    
+    
+    menuItem6.setPreferredSize(itemSize);
+    //menuItem5.setMaximumSize(itemSize);
+    menuItem6.setMinimumSize(itemSize);
+    // Thiết lập hành động cho các nút
+    menuItem1.setOnClickAction(() -> {
+        loadDulieulenBang2();
+        CardLayout cl = (CardLayout) JPmc.getLayout();
+        cl.show(JPmc, "JPttb");
+        
+        updateSelection(menuItem1);
+    });
+    
+    
+    menuItem2.setOnClickAction(() -> {
+         loadDulieulenBang1();
+        CardLayout cl = (CardLayout) JPmc.getLayout();
+        cl.show(JPmc, "JPtkb");
+        
+       
+        updateSelection(menuItem2);
+    });
+
+    menuItem3.setOnClickAction(() -> {
+        loadDulieulenBang3();
+        CardLayout cl = (CardLayout) JPmc.getLayout();
+        cl.show(JPmc, "JPtrb");
+                
+        updateSelection(menuItem3);
+    });
+
+    
+    menuItem6.setOnClickAction(() -> {
+            // Your custom action here
+            new LogIn().setVisible(true);
+            this.dispose();
+            updateSelection(menuItem6);
+    });
+   
+    
+    // Thiết lập BoxLayout cho jPanel1
+    jPanel11.setLayout(new BoxLayout(jPanel11, BoxLayout.Y_AXIS));
+
+    // Thêm các JPanel chứa các menuItem vào jPanel1
+     jPanel11.add(createPanelWithMenuItem(menuItem7));
+    jPanel11.add(Box.createRigidArea(new Dimension(0, 5)));
+    jPanel11.add(createPanelWithMenuItem(menuItem1));
+    jPanel11.add(Box.createRigidArea(new Dimension(0, 5)));
+    jPanel11.add(createPanelWithMenuItem(menuItem2));
+    jPanel11.add(Box.createRigidArea(new Dimension(0, 5)));
+    jPanel11.add(createPanelWithMenuItem(menuItem3));
+    jPanel11.add(Box.createRigidArea(new Dimension(0, 5)));
+    
+    // Thêm một khoảng cách giữa menuItem3 và menuItem5
+    jPanel11.add(Box.createRigidArea(new Dimension(0, 80))); // Thêm khoảng cách 50px
+    
+    
+
+    jPanel11.add(createPanelWithMenuItem(menuItem6));
+
+    // Cập nhật layout
+    jPanel11.revalidate();
+    jPanel11.repaint();    
+    }
+    
+    private void updateSelection(MenuItem menuItem) {
+        if (selectedMenuItem != null) {
+            selectedMenuItem.setSelected(false);
+        }
+        selectedMenuItem = menuItem;
+        selectedMenuItem.setSelected(true);
+    }
+
+    private JPanel createPanelWithMenuItem(JComponent menuItem) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+        panel.add(menuItem);
+        return panel;
+    }
     
     public static void xoaParkingSpot(String filePath, long spotID) {
         try {
@@ -254,7 +414,10 @@ public class admin extends javax.swing.JFrame {
     public admin() {
         initComponents();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jPanel11.setBackground(new Color(44, 62, 80));
         setLocationRelativeTo(null);
+        setResizable(false);
+        customInit();
         
         
         JPmc.add(JPttb, "JPttb");
@@ -289,6 +452,8 @@ public class admin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
         javax.swing.JPanel thanhcongcu = new BackgroundPanel("/quanlydoxe_img/n1.png");
         Bthongtinxe = new javax.swing.JButton();
         Btimkiem = new javax.swing.JButton();
@@ -355,6 +520,21 @@ public class admin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Smart Packing");
         setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel10.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 272, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 542, Short.MAX_VALUE)
+        );
+
+        jPanel10.add(jPanel11, "card3");
 
         Bthongtinxe.setBackground(new java.awt.Color(0, 90, 199));
         Bthongtinxe.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
@@ -449,7 +629,7 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(Btimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Btra, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
                 .addGroup(thanhcongcuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -460,13 +640,15 @@ public class admin extends javax.swing.JFrame {
                 .addGap(7, 7, 7))
         );
 
+        jPanel10.add(thanhcongcu, "card2");
+
         JPmc.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 538, Short.MAX_VALUE)
+            .addGap(0, 578, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -506,7 +688,7 @@ public class admin extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 516, Short.MAX_VALUE)
+            .addGap(0, 556, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -588,7 +770,7 @@ public class admin extends javax.swing.JFrame {
                     .addGroup(xoaCusLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(IDxoa, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, xoaCusLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(xoacus)
@@ -706,7 +888,7 @@ public class admin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -819,7 +1001,7 @@ public class admin extends javax.swing.JFrame {
                     .addGroup(JPttbLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE))
                 .addContainerGap())
         );
         JPttbLayout.setVerticalGroup(
@@ -888,7 +1070,7 @@ public class admin extends javax.swing.JFrame {
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 126, Short.MAX_VALUE)
+            .addGap(0, 130, Short.MAX_VALUE)
         );
 
         jPanel5.add(jPanel6, "card4");
@@ -953,7 +1135,7 @@ public class admin extends javax.swing.JFrame {
                         .addComponent(tienThem, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton10)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jPanel5.add(nhapThem, "card3");
@@ -999,7 +1181,7 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(textXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton11)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel5.add(nhapXoa, "card2");
@@ -1064,14 +1246,18 @@ public class admin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(thanhcongcu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(296, 296, 296)
                 .addComponent(JPmc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 602, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(thanhcongcu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(JPmc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -1314,6 +1500,8 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
