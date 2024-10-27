@@ -4,7 +4,7 @@
     <name>1</name>
     <phoneNumber>null</phoneNumber>
     <email>xeThoso</email>
-    <bienSo>12A-123.12</bienSo>
+    <bienSo>30V-123.12</bienSo>
     <spotId>null</spotId>
     <trangThaiXe>false</trangThaiXe>
     <qrCode>false</qrCode>
@@ -16,5 +16,6 @@
     <giov>null</giov>
     <phutv>null</phutv>
     <loaiDo>xeThoso</loaiDo>
+    <solan>1</solan>
   </Customer>
 </Customers>

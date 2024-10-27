@@ -23,10 +23,10 @@ public class Customer {
     private String giov;
     private String phutv;
     private spotType loaiDo;
+    private String solan;
 
-
-    public Customer(String customerId, String name, String phoneNumber, String email, String bienSo, String spotId, Boolean trangThaiXe, Boolean qrCode, String username, String password, String gio, String phut, String dayv, String giov, String phutv, spotType loaiDo) throws NoSuchAlgorithmException {
-        this.customerId = generateCustomerId();
+    public Customer(String customerId, String name, String phoneNumber, String email, String bienSo, String spotId, Boolean trangThaiXe, Boolean qrCode, String username, String password, String gio, String phut, String dayv, String giov, String phutv, spotType loaiDo, String solan) {
+        this.customerId = customerId;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -35,14 +35,17 @@ public class Customer {
         this.trangThaiXe = trangThaiXe;
         this.qrCode = qrCode;
         this.username = username;
-        this.password = hashPassword(password);
+        this.password = password;
         this.gio = gio;
         this.phut = phut;
         this.dayv = dayv;
         this.giov = giov;
         this.phutv = phutv;
         this.loaiDo = loaiDo;
+        this.solan = solan;
     }
+
+
 
     public Customer(String customerId, String name, String bienSo, String spotId, Boolean trangThaiXe, String username) {
         this.customerId = customerId;
@@ -93,6 +96,23 @@ public class Customer {
     return "CUS" + customerCounter; 
 }
 
+    public static int getCustomerCounter() {
+        return customerCounter;
+    }
+
+    public String getSolan() {
+        return solan;
+    }
+
+    public static void setCustomerCounter(int customerCounter) {
+        Customer.customerCounter = customerCounter;
+    }
+
+    public void setSolan(String solan) {
+        this.solan = solan;
+    }
+    
+    
     public String getDayv() {
         return dayv;
     }
@@ -240,6 +260,7 @@ public class Customer {
                 ", giov='" + giov +'\''+
                 ", phutv='"+phutv+'\''+
                 ", loaiDo='"+loaiDo+'\''+
+                ", loaiDo='"+solan+'\''+
                 '}';
     }
 }

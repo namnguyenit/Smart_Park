@@ -196,12 +196,16 @@ public class xacnhanma extends javax.swing.JFrame {
             String phutv = String.valueOf(minute);
             String n = user.getSolan();
             if(n.equals("null")){
+              
               int k =1 ;
               user.setSolan(String.valueOf(k));
+              
             }else{
+
             int k = Integer.parseInt(n);
             k++;
             user.setSolan(String.valueOf(k));
+            
             }
             user.setDayv(dayv);
             user.setGiov(giov);

@@ -1,329 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><parkingSpots>
-                          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <parkingSpot>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <spotID>1</spotID>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <tinhTrang>false</tinhTrang>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <chuXe>null</chuXe>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Gia>10000</Gia>
-                                                    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <type>xeThoso</type>
-                                                  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </parkingSpot>
-                        
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <parkingSpot>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <spotID>2</spotID>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <tinhTrang>false</tinhTrang>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <chuXe>null</chuXe>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Gia>20000</Gia>
-                                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <type>xeGanmay</type>
-                                              
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </parkingSpot>
-                      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <parkingSpot>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <spotID>3</spotID>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <tinhTrang>false</tinhTrang>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <chuXe>null</chuXe>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <Gia>20000</Gia>
-                                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <type>xeGanmay</type>
-                                          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </parkingSpot>
-                    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <parkingSpot>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    <spotID>4</spotID>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    <tinhTrang>false</tinhTrang>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    <chuXe>null</chuXe>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    <Gia>30000</Gia>
-                                        
-    
-    
-    
-    
-    
-    
-    
-    
-    <type>xeOto</type>
-                                      
-  
-  
-  
-  
-  
-  
-  
-  
-  </parkingSpot>
                   
   
   
@@ -332,7 +7,6 @@
   
   
   
-  
   <parkingSpot>
                                     
     
@@ -342,7 +16,7 @@
     
     
     
-    <spotID>5</spotID>
+    <spotID>1</spotID>
                                     
     
     
@@ -369,7 +43,7 @@
     
     
     
-    <Gia>30000</Gia>
+    <Gia>11323</Gia>
                                     
     
     
@@ -378,7 +52,7 @@
     
     
     
-    <type>xeOto</type>
+    <type>xeThoso</type>
                                   
   
   
@@ -404,7 +78,7 @@
     
     
     
-    <spotID>6</spotID>
+    <spotID>2</spotID>
                                 
     
     
@@ -428,7 +102,7 @@
     
     
     
-    <Gia>30000</Gia>
+    <Gia>11323</Gia>
                                 
     
     
@@ -436,7 +110,7 @@
     
     
     
-    <type>xeOto</type>
+    <type>xeThoso</type>
                               
   
   
@@ -459,7 +133,7 @@
     
     
     
-    <spotID>7</spotID>
+    <spotID>3</spotID>
                             
     
     
@@ -480,14 +154,14 @@
     
     
     
-    <Gia>40000</Gia>
+    <Gia>1003221</Gia>
                             
     
     
     
     
     
-    <type>xeChuyendung</type>
+    <type>xeGanmay</type>
                           
   
   
@@ -507,7 +181,7 @@
     
     
     
-    <spotID>8</spotID>
+    <spotID>4</spotID>
                         
     
     
@@ -525,13 +199,13 @@
     
     
     
-    <Gia>40000</Gia>
+    <Gia>1003221</Gia>
                         
     
     
     
     
-    <type>xeChuyendung</type>
+    <type>xeGanmay</type>
                       
   
   
@@ -548,7 +222,7 @@
     
     
     
-    <spotID>9</spotID>
+    <spotID>5</spotID>
                     
     
     
@@ -563,12 +237,12 @@
     
     
     
-    <Gia>40000</Gia>
+    <Gia>1003221</Gia>
                     
     
     
     
-    <type>xeChuyendung</type>
+    <type>xeGanmay</type>
                   
   
   
@@ -582,7 +256,7 @@
                 
     
     
-    <spotID>10</spotID>
+    <spotID>6</spotID>
                 
     
     
@@ -594,11 +268,11 @@
                 
     
     
-    <Gia>40000</Gia>
+    <Gia>100213</Gia>
                 
     
     
-    <type>xeChuyendung</type>
+    <type>xeOto</type>
               
   
   
@@ -609,7 +283,7 @@
   <parkingSpot>
             
     
-    <spotID>11</spotID>
+    <spotID>7</spotID>
             
     
     <tinhTrang>false</tinhTrang>
@@ -618,10 +292,10 @@
     <chuXe>null</chuXe>
             
     
-    <Gia>2</Gia>
+    <Gia>52332</Gia>
             
     
-    <type>xeThoso</type>
+    <type>xeChuyendung</type>
           
   
   </parkingSpot>
@@ -629,23 +303,23 @@
   
   <parkingSpot>
         
-    <spotID>12</spotID>
+    <spotID>8</spotID>
         
     <tinhTrang>false</tinhTrang>
         
     <chuXe>null</chuXe>
         
-    <Gia>2232424</Gia>
+    <Gia>52332</Gia>
         
-    <type>xeGanmay</type>
+    <type>xeChuyendung</type>
       
   </parkingSpot>
   
   <parkingSpot>
-    <spotID>13</spotID>
+    <spotID>9</spotID>
     <tinhTrang>false</tinhTrang>
     <chuXe>null</chuXe>
-    <Gia>2232424</Gia>
-    <type>xeGanmay</type>
+    <Gia>52332</Gia>
+    <type>xeChuyendung</type>
   </parkingSpot>
 </parkingSpots>

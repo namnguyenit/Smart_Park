@@ -108,6 +108,7 @@ public class CustomerXMLReader {
                         // Kiểm tra password đã mã hóa
                         if (storedPassword.equals(hashPassword(password))) {
                             String name = customerElement.getElementsByTagName("name").item(0).getTextContent();
+                            
                             String bienSo = customerElement.getElementsByTagName("bienSo").item(0).getTextContent();
                             String spotId = customerElement.getElementsByTagName("spotId").item(0).getTextContent();
                             Boolean trangThaiXe = Boolean.parseBoolean(customerElement.getElementsByTagName("trangThaiXe").item(0).getTextContent());
@@ -118,7 +119,7 @@ public class CustomerXMLReader {
                             String giov = customerElement.getElementsByTagName("giov").item(0).getTextContent();
                             String phutv = customerElement.getElementsByTagName("phutv").item(0).getTextContent();
                             String loaiDo = customerElement.getElementsByTagName("loaiDo").item(0).getTextContent();
-                            String solan = customerElement.getElementsByTagName("email").item(0).getTextContent();
+                            String solan = customerElement.getElementsByTagName("solan").item(0).getTextContent();
                             // Gán giá trị vào đối tượng User
                             User user = User.getInstance();
                             user.instance(name, bienSo, spotId, trangThaiXe, qrCode, username, gio, phut, dayv, giov, phutv, loaiDo, solan);

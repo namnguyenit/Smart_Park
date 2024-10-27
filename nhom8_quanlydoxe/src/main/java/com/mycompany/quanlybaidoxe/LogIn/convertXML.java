@@ -102,6 +102,10 @@ public class convertXML {
             Element loaiDo = doc.createElement("loaiDo");
             loaiDo.appendChild(doc.createTextNode(customer.getLoaiDo() != null ? customer.getLoaiDo().toString() : "null"));
             customerElement.appendChild(loaiDo);
+            
+            Element solan = doc.createElement("solan");
+            solan.appendChild(doc.createTextNode(customer.getSolan() != null ? customer.getSolan() : "null"));
+            customerElement.appendChild(solan);
 
             rootElement.appendChild(customerElement);
 

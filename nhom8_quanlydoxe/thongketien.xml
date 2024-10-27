@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <parkingSpots>
+          
+  
+  
+  
+  <parkingSpot>
+                    
+    
+    
+    
+    <chuXe>1</chuXe>
+                    
+    
+    
+    
+    <Gia>11323</Gia>
+                    
+    
+    
+    
+    <Ngay>27</Ngay>
+                  
+  
+  
+  
+  </parkingSpot>
+        
+  
+  
+  
+  <parkingSpot>
+                
+    
+    
+    <chuXe>1</chuXe>
+                
+    
+    
+    <Gia>0</Gia>
+                
+    
+    
+    <Ngay>27</Ngay>
+              
+  
+  
+  </parkingSpot>
+      
+  
+  
+  <parkingSpot>
+            
+    
+    <chuXe>1</chuXe>
+            
+    
+    <Gia>0</Gia>
+            
+    
+    <Ngay>27</Ngay>
+          
+  
+  </parkingSpot>
+    
+  
+  <parkingSpot>
+        
+    <chuXe>1</chuXe>
+        
+    <Gia>0</Gia>
+        
+    <Ngay>27</Ngay>
+      
+  </parkingSpot>
+  
   <parkingSpot>
     <chuXe>1</chuXe>
     <Gia>0</Gia>

@@ -37,6 +37,7 @@ public class UserUpdater {
                 if (storedUsername.equals(user.getUsername())) {
                     // Cập nhật thông tin trong XML
                     customerElement.getElementsByTagName("name").item(0).setTextContent(user.getName());
+                    customerElement.getElementsByTagName("email").item(0).setTextContent(user.getLoaiDo());
                     customerElement.getElementsByTagName("bienSo").item(0).setTextContent(user.getBienSo());
                     customerElement.getElementsByTagName("spotId").item(0).setTextContent(user.getSpotId());
                     customerElement.getElementsByTagName("trangThaiXe").item(0).setTextContent(user.getTrangThaiXe().toString());
@@ -47,7 +48,7 @@ public class UserUpdater {
                     customerElement.getElementsByTagName("giov").item(0).setTextContent(user.getGiov());
                     customerElement.getElementsByTagName("phutv").item(0).setTextContent(user.getPhutv());
                     customerElement.getElementsByTagName("loaiDo").item(0).setTextContent(user.getLoaiDo());
-                    customerElement.getElementsByTagName("email").item(0).setTextContent(user.getLoaiDo());
+                    customerElement.getElementsByTagName("solan").item(0).setTextContent(user.getSolan());
                     // Ghi lại tài liệu XML vào file
                     TransformerFactory transformerFactory = TransformerFactory.newInstance();
                     Transformer transformer = transformerFactory.newTransformer();

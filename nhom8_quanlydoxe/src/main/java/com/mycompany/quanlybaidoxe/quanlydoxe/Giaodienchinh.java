@@ -1080,10 +1080,12 @@ public class Giaodienchinh extends javax.swing.JFrame {
 
     private void JLbsxAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JLbsxAncestorAdded
         // TODO add your handling code here:
-        if(bsx.length() == 0){
+        
+        User user = User.getInstance();
+        if(user.getBienSo().length() == 3){
             JLbsx.setText("Chưa có thông tin...");
         }else{
-            JLbsx.setText(bsx);
+            JLbsx.setText(user.getBienSo());
         }
     }//GEN-LAST:event_JLbsxAncestorAdded
 
@@ -1101,11 +1103,11 @@ public class Giaodienchinh extends javax.swing.JFrame {
     private void JLsltbAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JLsltbAncestorAdded
         // TODO add your handling code here:
         User user = User.getInstance();
-        sl =  user.getSolan();
-        if(sl.equals("null")){
+        System.out.print(user.getSolan());
+        if(user.getSolan().equals("null")){
             JLsltb.setText("Chưa có thông tin...");
         }else{
-            JLsltb.setText(sl);
+            JLsltb.setText(user.getSolan());
         }
     }//GEN-LAST:event_JLsltbAncestorAdded
 
