@@ -117,10 +117,11 @@ public class CustomerXMLReader {
                             String dayv = customerElement.getElementsByTagName("dayv").item(0).getTextContent();
                             String giov = customerElement.getElementsByTagName("giov").item(0).getTextContent();
                             String phutv = customerElement.getElementsByTagName("phutv").item(0).getTextContent();
-                      
+                            String loaiDo = customerElement.getElementsByTagName("loaiDo").item(0).getTextContent();
+                            String solan = customerElement.getElementsByTagName("email").item(0).getTextContent();
                             // Gán giá trị vào đối tượng User
                             User user = User.getInstance();
-                            user.initialize(name, bienSo, spotId, trangThaiXe, qrCode, username, gio, phut, dayv, giov, phutv);
+                            user.instance(name, bienSo, spotId, trangThaiXe, qrCode, username, gio, phut, dayv, giov, phutv, loaiDo, solan);
                             return 1; 
                         } else {
                             return 0; 

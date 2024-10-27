@@ -4,6 +4,7 @@
  */
 package com.mycompany.quanlybaidoxe.timkiembai;
 
+import com.mycompany.quanlybaidoxe.quanlydoxe.User;
 import java.io.File;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.parsers.DocumentBuilder;
@@ -32,15 +33,15 @@ public class timbai {
                 Node node = nodeList.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element spotElement = (Element) node;
-
+                    User user = User.getInstance();
                     // Lấy dữ liệu từ các phần tử con (spotID, tinhTrang, chuXe, Gia)
                     String spotID = spotElement.getElementsByTagName("spotID").item(0).getTextContent();
                     Boolean tinhTrang = Boolean.parseBoolean(spotElement.getElementsByTagName("tinhTrang").item(0).getTextContent());
 
                     
                     String gia = spotElement.getElementsByTagName("Gia").item(0).getTextContent();
-
-                    if(tinhTrang.equals(false)){
+                    String loaixe = spotElement.getElementsByTagName("type").item(0).getTextContent();
+                    if(tinhTrang.equals(false) && loaixe.equals(user.getLoaiDo())){
                         tableModel.addRow(new Object[]{spotID, gia});
                     }
                 }

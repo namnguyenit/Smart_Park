@@ -44,7 +44,7 @@ public class Giaodienchinh extends javax.swing.JFrame {
     private String tnd="";
     private String bsx="";
     private String tkdn="";
-    private int sl=0;
+    private String sl;
     private MenuItem selectedMenuItem = null;
     
     //
@@ -1015,8 +1015,17 @@ public class Giaodienchinh extends javax.swing.JFrame {
             UserUpdater userUpdater = new UserUpdater(filePath);
             User user = User.getInstance();
             user.setBienSo(bsx);
+            if(nt.equals("0")){
+                user.setLoaiDo("xeThoso");
+            }else if(nt.equals("1")){
+                user.setLoaiDo("xeGanmay");
+            }else if(nt.equals("2")){
+                user.setLoaiDo("xeOto");
+            }else if(nt.equals("3")){
+                user.setLoaiDo("xeChuyendung");
+            }
             userUpdater.updateUser(user);
-
+            
             
             baoloi baoloi = new baoloi(Giaodienchinh.this, true);
             baoloi.showPanel("card6");
@@ -1024,7 +1033,7 @@ public class Giaodienchinh extends javax.swing.JFrame {
             System.out.println(user.getBienSo()+" " + user.getGio()+ " " + user.getName()+ " " + user.getPhut()+" " +user.getSpotId()+" " +user.getUsername() +" "+ user.getQrCode() +" "+user.getTrangThaiXe());
         }
         //lưu vào data để chỉ có một cái biển số xe thôi
-  
+        System.out.println(nt +" "+ nb);
     }//GEN-LAST:event_JBxnttActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1091,7 +1100,13 @@ public class Giaodienchinh extends javax.swing.JFrame {
 
     private void JLsltbAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_JLsltbAncestorAdded
         // TODO add your handling code here:
-        JLsltb.setText(String.valueOf(sl));
+        User user = User.getInstance();
+        sl =  user.getSolan();
+        if(sl.equals("null")){
+            JLsltb.setText("Chưa có thông tin...");
+        }else{
+            JLsltb.setText(sl);
+        }
     }//GEN-LAST:event_JLsltbAncestorAdded
 
     private void JClxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JClxActionPerformed

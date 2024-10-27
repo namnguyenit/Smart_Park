@@ -203,12 +203,12 @@ public class Timkiemtudong extends javax.swing.JFrame {
             Node node = nodeList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element spotElement = (Element) node;
-
+                User user = User.getInstance();
                 String tinhTrang = spotElement.getElementsByTagName("tinhTrang").item(0).getTextContent();
                 String spotID = spotElement.getElementsByTagName("spotID").item(0).getTextContent();
-
+                String laoixe = spotElement.getElementsByTagName("type").item(0).getTextContent();
                 // Kiểm tra nếu tinhTrang là false (chỗ trống)
-                if ("false".equals(tinhTrang)) {
+                if ("false".equals(tinhTrang)&& laoixe.equals(user.getLoaiDo())) {
                     availableSpots.add(spotID); // Thêm spotID vào danh sách
                 }
             }
