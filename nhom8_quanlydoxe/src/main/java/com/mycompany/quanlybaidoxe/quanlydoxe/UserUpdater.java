@@ -46,7 +46,8 @@ public class UserUpdater {
                     customerElement.getElementsByTagName("dayv").item(0).setTextContent(user.getDayv());
                     customerElement.getElementsByTagName("giov").item(0).setTextContent(user.getGiov());
                     customerElement.getElementsByTagName("phutv").item(0).setTextContent(user.getPhutv());
-
+                    customerElement.getElementsByTagName("loaiDo").item(0).setTextContent(user.getLoaiDo());
+                    customerElement.getElementsByTagName("email").item(0).setTextContent(user.getLoaiDo());
                     // Ghi lại tài liệu XML vào file
                     TransformerFactory transformerFactory = TransformerFactory.newInstance();
                     Transformer transformer = transformerFactory.newTransformer();

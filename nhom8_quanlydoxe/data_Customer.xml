@@ -3,8 +3,8 @@
     <customerId>CUS1001</customerId>
     <name>1</name>
     <phoneNumber>null</phoneNumber>
-    <email>null</email>
-    <bienSo>37A-123.12</bienSo>
+    <email>xeThoso</email>
+    <bienSo>12A-123.12</bienSo>
     <spotId>null</spotId>
     <trangThaiXe>false</trangThaiXe>
     <qrCode>false</qrCode>
@@ -15,6 +15,6 @@
     <dayv>null</dayv>
     <giov>null</giov>
     <phutv>null</phutv>
-    <loaiDo>null</loaiDo>
+    <loaiDo>xeThoso</loaiDo>
   </Customer>
 </Customers>

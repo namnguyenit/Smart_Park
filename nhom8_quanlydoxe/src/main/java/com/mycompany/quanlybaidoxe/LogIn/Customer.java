@@ -239,6 +239,7 @@ public class Customer {
                 ", dayv='" + dayv +'\''+
                 ", giov='" + giov +'\''+
                 ", phutv='"+phutv+'\''+
+                ", loaiDo='"+loaiDo+'\''+
                 '}';
     }
 }

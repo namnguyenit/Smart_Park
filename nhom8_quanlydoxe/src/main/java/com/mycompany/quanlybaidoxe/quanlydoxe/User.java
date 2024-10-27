@@ -21,6 +21,8 @@ public class User {
     private String dayv;
     private String giov;
     private String phutv;
+    private String loaiDo;
+    private String solan;
 
     
     private User() {}
@@ -33,7 +35,7 @@ public class User {
         return instance;
     }
 
-    public void initialize(String name, String bienSo, String spotId, Boolean trangThaiXe, Boolean qrCode, String username, String gio, String phut, String dayv, String giov, String phutv) {
+    public void instance(String name, String bienSo, String spotId, Boolean trangThaiXe, Boolean qrCode, String username, String gio, String phut, String dayv, String giov, String phutv, String loaiDo,String solan) {
         this.name = name;
         this.bienSo = bienSo;
         this.spotId = spotId;
@@ -45,7 +47,11 @@ public class User {
         this.dayv = dayv;
         this.giov = giov;
         this.phutv = phutv;
+        this.loaiDo = loaiDo;
+        this.solan = solan;
     }
+
+
 
     public String getName() {
         return name;
@@ -138,6 +144,23 @@ public class User {
     public void setPhutv(String phutv) {
         this.phutv = phutv;
     }
+
+    public String getLoaiDo() {
+        return loaiDo;
+    }
+
+    public void setLoaiDo(String loaiDo) {
+        this.loaiDo = loaiDo;
+    }
+
+    public String getSolan() {
+        return solan;
+    }
+
+    public void setSolan(String solan) {
+        this.solan = solan;
+    }
+    
     
     
     
