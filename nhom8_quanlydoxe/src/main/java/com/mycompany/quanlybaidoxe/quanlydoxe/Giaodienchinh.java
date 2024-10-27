@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.quanlybaidoxe.quanlydoxe;
 
 import javax.swing.JFrame;
@@ -20,6 +16,9 @@ import com.mycompany.quanlybaidoxe.quanlydoxe.baoloi;
 import com.mycompany.quanlybaidoxe.quanlydoxe.User;
 import com.mycompany.quanlybaidoxe.LogIn.LogIn;
 import java.awt.Dimension;
+import java.awt.Image;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -53,9 +52,22 @@ public class Giaodienchinh extends javax.swing.JFrame {
     /**
      * Creates new form Giaodienchinh
      */
+    
+    private void setFrameIcon() {
+        try {
+            // Tải ảnh từ tệp
+            Image icon = ImageIO.read(getClass().getResourceAsStream("/anh/icon.png"));
+            // Đặt icon cho JFrame
+            this.setIconImage(icon);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
     public Giaodienchinh() {
 
         initComponents();
+        setFrameIcon();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         customizeTextField();
         setLocationRelativeTo(null);

@@ -1,21 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><Customers>
+    
+  <Customer>
+        
+    <customerId>CUS1001</customerId>
+        
+    <name>1</name>
+        
+    <phoneNumber>null</phoneNumber>
+        
+    <email>xeOto</email>
+        
+    <bienSo>30A-567.89</bienSo>
+        
+    <spotId>null</spotId>
+        
+    <trangThaiXe>false</trangThaiXe>
+        
+    <qrCode>false</qrCode>
+        
+    <username>1</username>
+        
+    <password>a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=</password>
+        
+    <gio>null</gio>
+        
+    <phut>null</phut>
+        
+    <dayv>null</dayv>
+        
+    <giov>null</giov>
+        
+    <phutv>null</phutv>
+        
+    <loaiDo>xeOto</loaiDo>
+        
+    <solan>1</solan>
+      
+  </Customer>
+  
   <Customer>
     <customerId>CUS1001</customerId>
-    <name>1</name>
+    <name>3</name>
     <phoneNumber>null</phoneNumber>
-    <email>xeThoso</email>
-    <bienSo>30V-123.12</bienSo>
+    <email>null</email>
+    <bienSo>null</bienSo>
     <spotId>null</spotId>
-    <trangThaiXe>false</trangThaiXe>
-    <qrCode>false</qrCode>
-    <username>1</username>
-    <password>a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=</password>
+    <trangThaiXe>null</trangThaiXe>
+    <qrCode>null</qrCode>
+    <username>3</username>
+    <password>TgdAhWK+24tgzgXB3s/jrRa3IjCWfeAfZAt+Rym0n84=</password>
     <gio>null</gio>
     <phut>null</phut>
     <dayv>null</dayv>
     <giov>null</giov>
     <phutv>null</phutv>
-    <loaiDo>xeThoso</loaiDo>
-    <solan>1</solan>
+    <loaiDo>null</loaiDo>
+    <solan>null</solan>
   </Customer>
 </Customers>

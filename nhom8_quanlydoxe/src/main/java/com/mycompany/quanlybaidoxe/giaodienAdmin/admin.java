@@ -33,7 +33,10 @@ import com.mycompany.quanlybaidoxe.quanlydoxe.Giaodienchinh;
 import com.mycompany.quanlybaidoxe.quanlydoxe.MenuItem;
 import com.mycompany.quanlybaidoxe.quanlydoxe.User;
 import java.awt.Dimension;
+import java.awt.Image;
+import java.io.IOException;
 import java.util.ArrayList;
+import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -60,13 +63,7 @@ public class admin extends javax.swing.JFrame {
      DefaultTableModel tableModel2;
      DefaultTableModel tableModel3;
      DefaultTableModel tableModel4;
-     
-     
-     
-     
-    
-     
-    
+
     
     
     //nhập loại xe và biển số
@@ -80,12 +77,24 @@ public class admin extends javax.swing.JFrame {
     private int sl=0;
     private MenuItem selectedMenuItem = null;
     
-    //
     
     
     /**
      * Creates new form Giaodienchinh
      */
+    
+    private void setFrameIcon() {
+        try {
+            // Tải ảnh từ tệp
+            Image icon = ImageIO.read(getClass().getResourceAsStream("/anh/icon.png"));
+            // Đặt icon cho JFrame
+            this.setIconImage(icon);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
     public void  loadDulieulenBang1(){
         tableModel = (DefaultTableModel) bang1.getModel();
         tableModel.setRowCount(0);
@@ -413,6 +422,7 @@ public class admin extends javax.swing.JFrame {
 }
     public admin() {
         initComponents();
+        setFrameIcon();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jPanel11.setBackground(new Color(44, 62, 80));
         setLocationRelativeTo(null);
