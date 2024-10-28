@@ -481,9 +481,9 @@ public class Giaodienchinh extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel7.setText("Trả bãi đỗ xe");
 
-        jButton1.setBackground(new java.awt.Color(44, 62, 80));
+        jButton1.setBackground(new java.awt.Color(51, 65, 85));
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Xác nhận trả");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -517,25 +517,25 @@ public class Giaodienchinh extends javax.swing.JFrame {
 
         JPmc.add(JPtrb, "card4");
 
-        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel4.setText("Tạo thông tin xe");
 
-        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel5.setText("Nhập biển số xe");
 
-        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel6.setText("Chọn loại xe");
 
-        JTbxwir.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        JTbxwir.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         JTbxwir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTbxwirActionPerformed(evt);
             }
         });
 
-        JBxntt.setBackground(new java.awt.Color(0, 90, 199));
-        JBxntt.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        JBxntt.setForeground(new java.awt.Color(0, 0, 0));
+        JBxntt.setBackground(new java.awt.Color(51, 65, 85));
+        JBxntt.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        JBxntt.setForeground(new java.awt.Color(255, 255, 255));
         JBxntt.setText("Xác nhận");
         JBxntt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -544,6 +544,7 @@ public class Giaodienchinh extends javax.swing.JFrame {
         });
 
         JClx.setBackground(new java.awt.Color(255, 255, 255));
+        JClx.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         JClx.setForeground(new java.awt.Color(255, 255, 255));
         JClx.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Xe thô sơ", "Xe cơ giới (xe gắn máy)", "Xe cơ giới(xe ô tô)", "Xe chuyên dụng" }));
         JClx.addActionListener(new java.awt.event.ActionListener() {
@@ -562,33 +563,34 @@ public class Giaodienchinh extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel4))
                     .addGroup(JPttbLayout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addGroup(JPttbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(63, 63, 63)
+                        .addGroup(JPttbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JTbxwir, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)
-                            .addComponent(JTbxwir, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
-                            .addComponent(JClx, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(JPttbLayout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(JBxntt, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(JClx, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(90, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPttbLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JBxntt, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(207, 207, 207))
         );
         JPttbLayout.setVerticalGroup(
             JPttbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPttbLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addGap(78, 78, 78)
+                .addGap(84, 84, 84)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JTbxwir, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(JTbxwir, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JClx, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(JBxntt, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addComponent(JClx, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(JBxntt, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         JPmc.add(JPttb, "card2");
@@ -596,9 +598,9 @@ public class Giaodienchinh extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel8.setText("Xác nhận vào bãi");
 
-        JBqrv.setBackground(new java.awt.Color(0, 90, 199));
+        JBqrv.setBackground(new java.awt.Color(51, 65, 85));
         JBqrv.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        JBqrv.setForeground(new java.awt.Color(0, 0, 0));
+        JBqrv.setForeground(new java.awt.Color(255, 255, 255));
         JBqrv.setText("QR xác nhận");
         JBqrv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -606,9 +608,9 @@ public class Giaodienchinh extends javax.swing.JFrame {
             }
         });
 
-        JBmv.setBackground(new java.awt.Color(0, 90, 199));
+        JBmv.setBackground(new java.awt.Color(51, 65, 85));
         JBmv.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        JBmv.setForeground(new java.awt.Color(0, 0, 0));
+        JBmv.setForeground(new java.awt.Color(255, 255, 255));
         JBmv.setText("Mã xác nhận");
         JBmv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -621,15 +623,14 @@ public class Giaodienchinh extends javax.swing.JFrame {
         JPvbLayout.setHorizontalGroup(
             JPvbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPvbLayout.createSequentialGroup()
-                .addGroup(JPvbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPvbLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel8))
-                    .addGroup(JPvbLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addGroup(JPvbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JBqrv, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                            .addComponent(JBmv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addContainerGap(299, Short.MAX_VALUE))
+            .addGroup(JPvbLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(JPvbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JBqrv, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
+                    .addComponent(JBmv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JPvbLayout.setVerticalGroup(
@@ -649,19 +650,22 @@ public class Giaodienchinh extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel9.setText("Tìm kiếm bãi đỗ xe");
 
-        jButton4.setBackground(new java.awt.Color(0, 90, 199));
+        jButton4.setBackground(new java.awt.Color(51, 65, 85));
         jButton4.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Tìm kiếm tự động");
+        jButton4.setMaximumSize(new java.awt.Dimension(168, 35));
+        jButton4.setMinimumSize(new java.awt.Dimension(168, 35));
+        jButton4.setPreferredSize(new java.awt.Dimension(168, 35));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 90, 199));
+        jButton5.setBackground(new java.awt.Color(51, 65, 85));
         jButton5.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Lựa chọn bãi đỗ");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -674,28 +678,30 @@ public class Giaodienchinh extends javax.swing.JFrame {
         JPtkbLayout.setHorizontalGroup(
             JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPtkbLayout.createSequentialGroup()
-                .addGroup(JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(JPtkbLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel9))
-                        .addGroup(JPtkbLayout.createSequentialGroup()
-                            .addGap(174, 174, 174)
-                            .addComponent(jButton4))))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGroup(JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPtkbLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9))
+                    .addGroup(JPtkbLayout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addGroup(JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE))))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         JPtkbLayout.setVerticalGroup(
             JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPtkbLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addGap(78, 78, 78)
+                .addGap(99, 99, 99)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addGap(76, 76, 76)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
+
+        JPtkbLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton4, jButton5});
 
         JPmc.add(JPtkb, "card6");
 
