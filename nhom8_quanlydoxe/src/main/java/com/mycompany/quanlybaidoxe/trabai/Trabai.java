@@ -16,7 +16,7 @@ import com.mycompany.quanlybaidoxe.trabai.luutien;
  * @author nhannt
  */
 public class Trabai extends javax.swing.JFrame {
-    private int tongtien;
+    private int tongtien =-1;
     /**
      * Creates new form Trabai
      */
@@ -26,7 +26,7 @@ public class Trabai extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         loadTongTien();
         chuyendoi();
-        
+        System.out.println(tongtien);
   
     }
     public void chuyendoi(){
@@ -54,15 +54,19 @@ public class Trabai extends javax.swing.JFrame {
 
         // Gọi phương thức loadds() từ class Loaddanhsach và nhận tổng tiền
         tongtien = Loaddanhsach.loadds(filePath, tableModel);
-
+        
+        Number tongst = new dinhdangso();
+        String tongsotien = tongst.chuyenso(tongtien);
         // Kiểm tra giá trị tongtien trước khi cập nhật
         System.out.println("Tong tien: " + tongtien);
-
+        User user = User.getInstance();
         // Cập nhật jLabel2 với tổng tiền nếu > 0, nếu không hiện cảnh báo
         if (tongtien > 0) {
-            jLabel2.setText(String.valueOf(tongtien));
-        } else {
-            jLabel2.setText("KHông tìm thấy hoặc tatol = 0");
+            jLabel2.setText(tongsotien);
+        } else if(user.getDayv().equals("null")){
+            jLabel2.setText("Bạn chưa vào bãi");
+        }else{
+            jLabel2.setText("Warring:Bạn trả xe quá nhanh!!!");
         }
     }    
 
