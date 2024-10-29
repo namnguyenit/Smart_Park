@@ -249,9 +249,9 @@ public class Giaodienchinh extends javax.swing.JFrame {
     jPanel7.add(Box.createRigidArea(new Dimension(0, 5)));
     jPanel7.add(createPanelWithMenuItem(menuItem2));
     jPanel7.add(Box.createRigidArea(new Dimension(0, 5)));
-    jPanel7.add(createPanelWithMenuItem(menuItem3));
-    jPanel7.add(Box.createRigidArea(new Dimension(0, 5)));
     jPanel7.add(createPanelWithMenuItem(menuItem4));
+    jPanel7.add(Box.createRigidArea(new Dimension(0, 5)));
+    jPanel7.add(createPanelWithMenuItem(menuItem3));
     // Thêm một khoảng cách giữa menuItem3 và menuItem5
     jPanel7.add(Box.createRigidArea(new Dimension(0, 50))); // Thêm khoảng cách 50px
     
@@ -501,9 +501,9 @@ public class Giaodienchinh extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel7))
                     .addGroup(JPtrbLayout.createSequentialGroup()
-                        .addGap(198, 198, 198)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(199, Short.MAX_VALUE))
+                        .addGap(109, 109, 109)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         JPtrbLayout.setVerticalGroup(
             JPtrbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -23,6 +23,7 @@ com/mycompany/quanlybaidoxe/giaodienAdmin/khoitaoform$5.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/admin$1.class
 com/mycompany/quanlybaidoxe/LogIn/spotType.class
 com/mycompany/quanlybaidoxe/quanlydoxe/Giaodienchinh$18.class
+com/mycompany/quanlybaidoxe/maxacnhan/xacnhanQr$2.class
 com/mycompany/quanlybaidoxe/maxacnhan/saima$1.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/admin$4.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn$12.class
@@ -38,6 +39,7 @@ com/mycompany/quanlybaidoxe/giaodienAdmin/khoitaoform$6.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/admin$18.class
 com/mycompany/quanlybaidoxe/quanlydoxe/Giaodienchinh$5.class
 com/mycompany/quanlybaidoxe/quanlydoxe/Giaodienchinh$13.class
+com/mycompany/quanlybaidoxe/timkiembai/Timkiemtudong$4.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn$9.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn$2.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/admin$11.class
@@ -50,10 +52,12 @@ com/mycompany/quanlybaidoxe/quanlydoxe/MenuItem$1.class
 com/mycompany/quanlybaidoxe/LogIn/thanhcong$1.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn$1.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn$8.class
+com/mycompany/quanlybaidoxe/maxacnhan/xacnhanQr$QRCodeDisplay.class
 com/mycompany/quanlybaidoxe/timkiembai/Luachonbai$1.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/admin.class
 com/mycompany/quanlybaidoxe/quanlydoxe/Giaodienchinh$4.class
 com/mycompany/quanlybaidoxe/trabai/Trabai$1.class
+com/mycompany/quanlybaidoxe/timkiembai/Timkiemtudong$5.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/admin$9.class
 com/mycompany/quanlybaidoxe/giaodienAdmin/khoitaokhongthanhcong.class
 com/mycompany/quanlybaidoxe/quanlydoxe/Giaodienchinh$19.class
@@ -100,6 +104,7 @@ com/mycompany/quanlybaidoxe/giaodienAdmin/loadTable.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn$5.class
 com/mycompany/quanlybaidoxe/LogIn/LogIn.class
 com/mycompany/quanlybaidoxe/maxacnhan/xacnhanQr.class
+com/mycompany/quanlybaidoxe/maxacnhan/crtQr.class
 com/mycompany/quanlybaidoxe/quanlydoxe/baoloi$1.class
 com/mycompany/quanlybaidoxe/timkiembai/baoloi$1.class
 com/mycompany/quanlybaidoxe/quanlydoxe/Giaodienchinh$17.class

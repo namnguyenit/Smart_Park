@@ -5,6 +5,7 @@
 package com.mycompany.quanlybaidoxe.timkiembai;
 
 import com.mycompany.quanlybaidoxe.quanlydoxe.User;
+import com.mycompany.quanlybaidoxe.trabai.dinhdangso;
 import java.io.File;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.parsers.DocumentBuilder;
@@ -13,6 +14,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import com.mycompany.quanlybaidoxe.trabai.Number;
+import com.mycompany.quanlybaidoxe.trabai.dinhdangso;
 
 /**
  *
@@ -42,7 +45,11 @@ public class timbai {
                     String gia = spotElement.getElementsByTagName("Gia").item(0).getTextContent();
                     String loaixe = spotElement.getElementsByTagName("type").item(0).getTextContent();
                     if(tinhTrang.equals(false) && loaixe.equals(user.getLoaiDo())){
-                        tableModel.addRow(new Object[]{spotID, gia});
+                    
+                    int sotien = Integer.parseInt(gia);
+                    Number tongst = new dinhdangso();
+                    String sotien1 = tongst.chuyenso(sotien);
+                        tableModel.addRow(new Object[]{spotID, sotien1});
                     }
                 }
             }

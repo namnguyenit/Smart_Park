@@ -27,6 +27,8 @@ public class LogIn extends javax.swing.JFrame {
     public LogIn() {
         initComponents();
         setFrameIcon();
+        setLocationRelativeTo(null);
+        setResizable(false);
         jPanel3.add(LogIn,"jPanel4");
         jPanel3.add(SignIn,"jPanel6");
         CardLayout  cl = (CardLayout) jPanel3.getLayout();
@@ -137,9 +139,9 @@ public class LogIn extends javax.swing.JFrame {
 
         jLabel7.setText("Nhập lại mật khẩu:");
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3.setBackground(new java.awt.Color(255, 230, 230));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Đăng ký");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,9 +229,9 @@ public class LogIn extends javax.swing.JFrame {
                 .addGroup(khungdangkyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nhaplaimk, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(showPass2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout SignInLayout = new javax.swing.GroupLayout(SignIn);
@@ -294,9 +296,9 @@ public class LogIn extends javax.swing.JFrame {
 
         jLabel3.setText("Mật khẩu:");
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setBackground(new java.awt.Color(230, 242, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Đăng nhập");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
