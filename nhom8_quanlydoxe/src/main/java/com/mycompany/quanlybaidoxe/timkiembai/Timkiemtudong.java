@@ -96,6 +96,9 @@ public class Timkiemtudong extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel2.setText("Bãi số:");
 
+        JBxnb.setBackground(new java.awt.Color(51, 65, 85));
+        JBxnb.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        JBxnb.setForeground(new java.awt.Color(255, 255, 255));
         JBxnb.setText("Xác nhận");
         JBxnb.setPreferredSize(new java.awt.Dimension(100, 50));
         JBxnb.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +107,9 @@ public class Timkiemtudong extends javax.swing.JFrame {
             }
         });
 
+        JBdb.setBackground(new java.awt.Color(255, 255, 255));
+        JBdb.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        JBdb.setForeground(new java.awt.Color(0, 0, 0));
         JBdb.setText("đổi bãi");
         JBdb.setPreferredSize(new java.awt.Dimension(100, 50));
         JBdb.addActionListener(new java.awt.event.ActionListener() {

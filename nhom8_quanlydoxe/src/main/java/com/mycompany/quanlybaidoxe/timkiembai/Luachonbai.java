@@ -74,6 +74,9 @@ public class Luachonbai extends javax.swing.JFrame {
             JT2.getColumnModel().getColumn(0).setMaxWidth(120);
         }
 
+        jButton1.setBackground(new java.awt.Color(51, 65, 85));
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Xác nhận");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
