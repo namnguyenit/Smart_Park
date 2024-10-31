@@ -47,4 +47,4 @@
 ### Lưu ý:
 - Đây chỉ là **ứng dụng demo**, nên chưa có đầy đủ tính năng.  
 - Các thầy cô và các bạn vui lòng xem và nhận xét phần mềm.  
-- Thông tin chi tiết về phần mềm có thể tham khảo trong file **README.txt** trong thư mục **nhom8_quanlydoxe**.
+- Thông tin chi tiết về phần mềm có thể tham khảo trong file **README.md** trong thư mục **nhom8_quanlydoxe**.
