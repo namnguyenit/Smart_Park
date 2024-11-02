@@ -1,26 +1,581 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Customers>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Customers>
+                                                    
+  
+  
+  
+  
+  
+          
+  
+  
+  
+  
+  
+        
+  
+  
+  
+  
+      
+  
+  
+  
     
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+          
+  
+  
+  
+  
+  
+        
+  
+  
+  
+  
+      
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <Customer>
+                            
+    
+    
+    
+    
+    
+    <customerId>CUS1001</customerId>
+                            
+    
+    
+    
+    
+    
+    <name>1</name>
+                            
+    
+    
+    
+    
+    
+    <phoneNumber>null</phoneNumber>
+                            
+    
+    
+    
+    
+    
+    <email>null</email>
+                            
+    
+    
+    
+    
+    
+    <bienSo>null</bienSo>
+                            
+    
+    
+    
+    
+    
+    <spotId>null</spotId>
+                            
+    
+    
+    
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                            
+    
+    
+    
+    
+    
+    <qrCode>null</qrCode>
+                            
+    
+    
+    
+    
+    
+    <username>1</username>
+                            
+    
+    
+    
+    
+    
+    <password>a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=</password>
+                            
+    
+    
+    
+    
+    
+    <gio>null</gio>
+                            
+    
+    
+    
+    
+    
+    <phut>null</phut>
+                            
+    
+    
+    
+    
+    
+    <dayv>null</dayv>
+                            
+    
+    
+    
+    
+    
+    <giov>null</giov>
+                            
+    
+    
+    
+    
+    
+    <phutv>null</phutv>
+                            
+    
+    
+    
+    
+    
+    <loaiDo>null</loaiDo>
+                            
+    
+    
+    
+    
+    
+    <solan>null</solan>
+                          
+  
+  
+  
+  
+  
+  </Customer>
+            
+  
+  
+  
+  
+  
+  <Customer>
+                        
+    
+    
+    
+    
+    <customerId>CUS1002</customerId>
+                        
+    
+    
+    
+    
+    <name>12</name>
+                        
+    
+    
+    
+    
+    <phoneNumber>null</phoneNumber>
+                        
+    
+    
+    
+    
+    <email>null</email>
+                        
+    
+    
+    
+    
+    <bienSo>null</bienSo>
+                        
+    
+    
+    
+    
+    <spotId>null</spotId>
+                        
+    
+    
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                        
+    
+    
+    
+    
+    <qrCode>null</qrCode>
+                        
+    
+    
+    
+    
+    <username>12</username>
+                        
+    
+    
+    
+    
+    <password>a1HUMd9dfxQcvs7M957fPdhhw7QGnwsRZho+76y7qRg=</password>
+                        
+    
+    
+    
+    
+    <gio>null</gio>
+                        
+    
+    
+    
+    
+    <phut>null</phut>
+                        
+    
+    
+    
+    
+    <dayv>null</dayv>
+                        
+    
+    
+    
+    
+    <giov>null</giov>
+                        
+    
+    
+    
+    
+    <phutv>null</phutv>
+                        
+    
+    
+    
+    
+    <loaiDo>null</loaiDo>
+                        
+    
+    
+    
+    
+    <solan>null</solan>
+                      
+  
+  
+  
+  
+  </Customer>
+          
+  
+  
+  
+  
+  <Customer>
+                    
+    
+    
+    
+    <customerId>CUS1003</customerId>
+                    
+    
+    
+    
+    <name>123</name>
+                    
+    
+    
+    
+    <phoneNumber>null</phoneNumber>
+                    
+    
+    
+    
+    <email>null</email>
+                    
+    
+    
+    
+    <bienSo>null</bienSo>
+                    
+    
+    
+    
+    <spotId>null</spotId>
+                    
+    
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                    
+    
+    
+    
+    <qrCode>null</qrCode>
+                    
+    
+    
+    
+    <username>123</username>
+                    
+    
+    
+    
+    <password>pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=</password>
+                    
+    
+    
+    
+    <gio>null</gio>
+                    
+    
+    
+    
+    <phut>null</phut>
+                    
+    
+    
+    
+    <dayv>null</dayv>
+                    
+    
+    
+    
+    <giov>null</giov>
+                    
+    
+    
+    
+    <phutv>null</phutv>
+                    
+    
+    
+    
+    <loaiDo>null</loaiDo>
+                    
+    
+    
+    
+    <solan>null</solan>
+                  
+  
+  
+  
+  </Customer>
+        
+  
+  
+  
+  <Customer>
+                
+    
+    
+    <customerId>CUS1004</customerId>
+                
+    
+    
+    <name>6</name>
+                
+    
+    
+    <phoneNumber>null</phoneNumber>
+                
+    
+    
+    <email>null</email>
+                
+    
+    
+    <bienSo>null</bienSo>
+                
+    
+    
+    <spotId>null</spotId>
+                
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                
+    
+    
+    <qrCode>null</qrCode>
+                
+    
+    
+    <username>6</username>
+                
+    
+    
+    <password>5/bAEXdujbfNMwtUF0/Xb30CFrYSOHpf/PuB5vCRloM=</password>
+                
+    
+    
+    <gio>null</gio>
+                
+    
+    
+    <phut>null</phut>
+                
+    
+    
+    <dayv>null</dayv>
+                
+    
+    
+    <giov>null</giov>
+                
+    
+    
+    <phutv>null</phutv>
+                
+    
+    
+    <loaiDo>null</loaiDo>
+                
+    
+    
+    <solan>null</solan>
+              
+  
+  
+  </Customer>
+      
+  
+  
+  <Customer>
+            
+    
+    <customerId>CUS1005</customerId>
+            
+    
+    <name>67</name>
+            
+    
+    <phoneNumber>null</phoneNumber>
+            
+    
+    <email>null</email>
+            
+    
+    <bienSo>null</bienSo>
+            
+    
+    <spotId>null</spotId>
+            
+    
+    <trangThaiXe>null</trangThaiXe>
+            
+    
+    <qrCode>null</qrCode>
+            
+    
+    <username>67</username>
+            
+    
+    <password>SdGA7PVhMoGVcb852bezQlIqKsbSPBQY0zOCUb/kacg=</password>
+            
+    
+    <gio>null</gio>
+            
+    
+    <phut>null</phut>
+            
+    
+    <dayv>null</dayv>
+            
+    
+    <giov>null</giov>
+            
+    
+    <phutv>null</phutv>
+            
+    
+    <loaiDo>null</loaiDo>
+            
+    
+    <solan>null</solan>
+          
+  
+  </Customer>
+    
+  
   <Customer>
         
-    <customerId>CUS1001</customerId>
+    <customerId>CUS1006</customerId>
         
-    <name>1</name>
+    <name>tyty</name>
         
     <phoneNumber>null</phoneNumber>
         
-    <email>xeOto</email>
+    <email>null</email>
         
-    <bienSo>30A-567.89</bienSo>
+    <bienSo>null</bienSo>
         
     <spotId>null</spotId>
         
-    <trangThaiXe>false</trangThaiXe>
+    <trangThaiXe>null</trangThaiXe>
         
-    <qrCode>false</qrCode>
+    <qrCode>null</qrCode>
         
-    <username>1</username>
+    <username>tytyt</username>
         
-    <password>a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=</password>
+    <password>pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=</password>
         
     <gio>null</gio>
         
@@ -32,23 +587,23 @@
         
     <phutv>null</phutv>
         
-    <loaiDo>xeOto</loaiDo>
+    <loaiDo>null</loaiDo>
         
-    <solan>3</solan>
+    <solan>null</solan>
       
   </Customer>
   
   <Customer>
-    <customerId>CUS1001</customerId>
-    <name>3</name>
+    <customerId>CUS1007</customerId>
+    <name>ppp</name>
     <phoneNumber>null</phoneNumber>
     <email>null</email>
     <bienSo>null</bienSo>
     <spotId>null</spotId>
     <trangThaiXe>null</trangThaiXe>
     <qrCode>null</qrCode>
-    <username>3</username>
-    <password>TgdAhWK+24tgzgXB3s/jrRa3IjCWfeAfZAt+Rym0n84=</password>
+    <username>ppp</username>
+    <password>xCiWKbCLxNYUEaqm1tSgw8X4wehI4oKXbim2vtWu7cc=</password>
     <gio>null</gio>
     <phut>null</phut>
     <dayv>null</dayv>
