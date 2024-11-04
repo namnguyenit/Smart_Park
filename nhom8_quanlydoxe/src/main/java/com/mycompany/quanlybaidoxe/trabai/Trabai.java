@@ -25,11 +25,12 @@ public class Trabai extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         loadTongTien();
-        chuyendoi();
+        
         System.out.println(tongtien);
   
     }
     public void chuyendoi(){
+        //thong qua user de lay so lan vao ra
         
         User user = User.getInstance();
         String h = user.getName();
@@ -40,7 +41,7 @@ public class Trabai extends javax.swing.JFrame {
         String filePath = "thongketien.xml";
 
         try {
-            luutien.addParkingSpotToXML(spot1, filePath);
+            luutien.luufilera(spot1, filePath);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -205,6 +206,7 @@ public class Trabai extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        chuyendoi();
         User user = User.getInstance();
         String filePath = "data_parkSpot.xml";//
             UpdateParkingSpot updater = new UpdateParkingSpot(filePath);
