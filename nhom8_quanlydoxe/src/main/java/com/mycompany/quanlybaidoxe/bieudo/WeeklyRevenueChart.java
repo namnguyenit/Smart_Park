@@ -27,10 +27,12 @@ import java.util.Calendar;
 public class WeeklyRevenueChart {
     private JPanel jPanel;
     private JLabel jLabel;
+    private JLabel jLabel1;
 
-    public WeeklyRevenueChart(JPanel jPanel,JLabel jLabel) {
+    public WeeklyRevenueChart(JPanel jPanel,JLabel jLabel,JLabel jLabel1) {
         this.jPanel = jPanel;
         this.jLabel = jLabel;
+        this.jLabel1 = jLabel1;
     }
 
     public void createWeeklyRevenueChart() {
@@ -68,7 +70,7 @@ public class WeeklyRevenueChart {
         }
 
         // Tạo biểu đồ
-        CategoryChart chart = new CategoryChartBuilder().width(900).height(500)
+        CategoryChart chart = new CategoryChartBuilder().width(900).height(490)
                 .title("Doanh thu từng tuần trong tháng")
                 .xAxisTitle("Tuần")
                 .yAxisTitle("Doanh thu")
@@ -92,8 +94,11 @@ public class WeeklyRevenueChart {
         for (double revenue : weeklyRevenue) {
             totalRevenue += revenue;
         }
+        
+        double trungbinh = totalRevenue/4.0;
         DecimalFormat decimalFormat = new DecimalFormat("#,###");
         jLabel.setText(decimalFormat.format(totalRevenue) + " VNĐ");
+        jLabel1.setText(decimalFormat.format(trungbinh)+ " VNĐ");
         // Cập nhật biểu đồ trong JPanel
         jPanel.removeAll();
         jPanel.add(new XChartPanel<>(chart), BorderLayout.CENTER);

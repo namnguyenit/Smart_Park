@@ -19,15 +19,18 @@ import org.w3c.dom.NodeList;
 
 import java.awt.*;
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TimeChart {
     private JPanel jPanel;
+    private JLabel jLabel;
     private XChartPanel<CategoryChart> chartPanel;
 
-    public TimeChart(JPanel jPanel) {
+    public TimeChart(JPanel jPanel,JLabel jLabel) {
         this.jPanel = jPanel;
+        this.jLabel = jLabel;
     }
 
     public void createHourlyChart() {
@@ -63,7 +66,7 @@ public class TimeChart {
         }
 
         // Tạo biểu đồ
-        CategoryChart chart = new CategoryChartBuilder().width(900).height(500)
+        CategoryChart chart = new CategoryChartBuilder().width(900).height(490)
                 .title("Số lượt vào và ra trong ngày mỗi 2h")
                 .xAxisTitle("Khoảng 2 giờ")
                 .yAxisTitle("Số lượt")
@@ -90,7 +93,14 @@ public class TimeChart {
         // Thêm dữ liệu vào biểu đồ
         chart.addSeries("Lượt vào", timeRanges, entryData);
         chart.addSeries("Lượt ra", timeRanges, exitData);
-
+        
+        int soxe = 0;
+        for (int revenue : entryCounts ) {
+            soxe += revenue;
+        }
+        DecimalFormat decimalFormat = new DecimalFormat("#,###");
+        jLabel.setText(decimalFormat.format(soxe));
+        
         // Cập nhật biểu đồ trong JPanel
         if (chartPanel != null) {
             jPanel.remove(chartPanel);
