@@ -560,10 +560,11 @@ public class admin extends javax.swing.JFrame {
         jPanel19 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
         Bdt = new javax.swing.JButton();
         Bdn = new javax.swing.JButton();
         Brv = new javax.swing.JButton();
+        jScrollPane4 = new RoundedScrollPane(jPanel18,25);
+        jPanel18 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Smart Packing");
@@ -1363,8 +1364,6 @@ public class admin extends javax.swing.JFrame {
 
         jPanel17.add(jPanel19, "card2");
 
-        jPanel18.setLayout(new java.awt.BorderLayout());
-
         Bdt.setText("Tháng");
         Bdt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1386,6 +1385,9 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
+        jPanel18.setLayout(new java.awt.BorderLayout());
+        jScrollPane4.setViewportView(jPanel18);
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
@@ -1400,7 +1402,11 @@ public class admin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(Brv)
                 .addGap(0, 35, Short.MAX_VALUE))
-            .addComponent(jPanel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                    .addContainerGap(16, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1058, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1417,7 +1423,12 @@ public class admin extends javax.swing.JFrame {
                             .addComponent(Bdn)
                             .addComponent(Brv))
                         .addGap(21, 21, 21)))
-                .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(558, Short.MAX_VALUE))
+            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                    .addContainerGap(136, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
 
         JPmc.add(jPanel14, "card6");
@@ -1688,6 +1699,7 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JComboBox<String> locnguoidung;

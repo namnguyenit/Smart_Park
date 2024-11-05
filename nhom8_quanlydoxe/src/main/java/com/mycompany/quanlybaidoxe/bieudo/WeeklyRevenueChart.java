@@ -68,7 +68,7 @@ public class WeeklyRevenueChart {
         }
 
         // Tạo biểu đồ
-        CategoryChart chart = new CategoryChartBuilder().width(800).height(600)
+        CategoryChart chart = new CategoryChartBuilder().width(900).height(500)
                 .title("Doanh thu từng tuần trong tháng")
                 .xAxisTitle("Tuần")
                 .yAxisTitle("Doanh thu")

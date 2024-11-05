@@ -63,7 +63,7 @@ public class TimeChart {
         }
 
         // Tạo biểu đồ
-        CategoryChart chart = new CategoryChartBuilder().width(800).height(600)
+        CategoryChart chart = new CategoryChartBuilder().width(900).height(500)
                 .title("Số lượt vào và ra trong ngày mỗi 2h")
                 .xAxisTitle("Khoảng 2 giờ")
                 .yAxisTitle("Số lượt")
