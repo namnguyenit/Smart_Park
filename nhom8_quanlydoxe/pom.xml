@@ -33,4 +33,26 @@
             </plugin>
         </plugins>
     </build>
+    
+    <dependencies>
+        <!-- ZXing dependency for QR code generation -->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+        
+        <!-- ZXing Java SE extension for handling BufferedImage -->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.knowm.xchart</groupId>
+            <artifactId>xchart</artifactId>
+            <version>3.8.0</version> <!-- Phiên bản mới nhất tại thời điểm viết -->
+        </dependency>
+    </dependencies>
+
 </project>

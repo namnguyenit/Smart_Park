@@ -1,12 +1,18 @@
 package com.mycompany.quanlybaidoxe.LogIn;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
+import java.util.Scanner;
 
 
 public class Customer {
-    private static int customerCounter = 1000;
+    private long customerCounter = 1000;
+    protected static long nextCusID=1;
     private String customerId;
     private String name;
     private String phoneNumber;
@@ -73,10 +79,6 @@ public class Customer {
     public void setLoaiDo(spotType loaiDo) {
         this.loaiDo = loaiDo;
     }
-    
-
-
-
 
     public Customer(String name, String username, String password) throws NoSuchAlgorithmException {
         this.customerId = generateCustomerId(); 
@@ -92,11 +94,14 @@ public class Customer {
     }
     
     private String generateCustomerId() {
-    customerCounter++; 
-    return "CUS" + customerCounter; 
-}
+        loadNextIDFromFile();
+        customerCounter=customerCounter+nextCusID;
+        nextCusID++;
+        saveNextIDToFile();
+        return "CUS" + customerCounter; 
+    }
 
-    public static int getCustomerCounter() {
+    public  long getCustomerCounter() {
         return customerCounter;
     }
 
@@ -104,8 +109,8 @@ public class Customer {
         return solan;
     }
 
-    public static void setCustomerCounter(int customerCounter) {
-        Customer.customerCounter = customerCounter;
+    public  void setCustomerCounter(int customerCounter) {
+        this.customerCounter = customerCounter;
     }
 
     public void setSolan(String solan) {
@@ -240,6 +245,26 @@ public class Customer {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         byte[] hashedBytes = md.digest(password.getBytes());
         return Base64.getEncoder().encodeToString(hashedBytes);
+    }
+    public static void saveNextIDToFile() {
+        try (FileWriter writer = new FileWriter("nextCusID.txt")) {
+            writer.write(Long.toString(nextCusID));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void loadNextIDFromFile() {
+        File file = new File("nextCusID.txt");
+        if (file.exists()) {
+            try (Scanner scanner = new Scanner(file)) {
+                if (scanner.hasNextLong()) {
+                    nextCusID = scanner.nextLong();
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override

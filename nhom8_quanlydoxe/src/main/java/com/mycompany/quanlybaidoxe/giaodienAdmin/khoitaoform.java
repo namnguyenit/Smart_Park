@@ -42,6 +42,8 @@ public class khoitaoform extends javax.swing.JDialog {
     public khoitaoform(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
