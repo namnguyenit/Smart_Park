@@ -69,6 +69,8 @@ public class admin extends javax.swing.JFrame {
      DefaultTableModel tableModel4;
      DefaultTableModel tableModel5;
      DefaultTableModel tableModel6;
+     DefaultTableModel tableModel7;
+     DefaultTableModel tableModel8;
 
     
     
@@ -166,6 +168,50 @@ public class admin extends javax.swing.JFrame {
             tableModel6.addRow(rowData);
         }
     }
+    
+        
+    public void loadtklenBang3(String tukhoa){
+        tableModel7 = (DefaultTableModel) bang3.getModel();
+        tableModel7.setRowCount(0);
+        ArrayList<Customer> customerTK = new ArrayList<>();
+        customerTK = CustomerFilter.timkiem(tukhoa, "data_Customer.xml");
+        for (Customer customer : customerTK) {
+            Object[] rowData = {
+                customer.getCustomerId(),   
+                customer.getName(),         
+                customer.getUsername(),     
+                customer.getBienSo(),       
+                customer.getTrangThaiXe(),  
+                customer.getSpotId()        
+            };
+            tableModel7.addRow(rowData);
+        }
+        
+    }
+    
+    
+    public void loadTKlenBang2(String tukhoa){
+        tableModel8 = (DefaultTableModel) bang2.getModel();
+        tableModel8.setRowCount(0);
+        ArrayList<parkingSpot> SpotTK = new ArrayList<>();
+        SpotTK = ParkingSpotFilter.timKiem(tukhoa, "data_parkSpot.xml");
+        for (parkingSpot spot : SpotTK){
+            Object[] rowData ={
+                spot.getSpotID(),
+                spot.getTinhTrang(),
+                spot.getChuXe(),
+                spot.getGia(),
+                spot.getType()
+            };
+            tableModel8.addRow(rowData);
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     private void customInit() {
     MenuItem menuItem1 = new MenuItem("Thông tin bãi đỗ xe");
@@ -353,6 +399,18 @@ public class admin extends javax.swing.JFrame {
         }
     }
     
+    // hàm làm hiệu ứng cho các nút chức năng
+     private void changeButtonColor(JButton clickedButton) {
+        // Đặt màu tất cả các nút thành trắng
+        Bthongtinxe.setBackground(new Color(40, 62, 80));
+        Btimkiem.setBackground(new Color(40, 62, 80));
+        Btra.setBackground(new Color(40, 62, 80));
+        jButton2.setBackground(new Color(40, 62, 80));
+
+        // Đặt nút được nhấn thành màu xanh
+        clickedButton.setBackground(new Color(81, 99, 114));
+    }
+    
     
     public static void xoaCustomer(String filePath, String customerId) {
         try {
@@ -497,13 +555,12 @@ public class admin extends javax.swing.JFrame {
 
         jPanel10 = new javax.swing.JPanel();
         javax.swing.JPanel thanhcongcu = new javax.swing.JPanel();
-        Bthongtinxe = new javax.swing.JButton();
-        Btimkiem = new javax.swing.JButton();
-        Btra = new javax.swing.JButton();
+        Bthongtinxe = new Button();
+        Btimkiem = new Button();
+        Btra = new Button();
         Bthoat = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButton2 = new Button();
         jPanel11 = new javax.swing.JPanel();
         JPmc = new BackgroundPanel("/quanlydoxe_img/Wellcom.png");
         javax.swing.JPanel jPanel2 = new BackgroundPanel("/quanlydoxe_img/Wellcom.png");
@@ -512,7 +569,7 @@ public class admin extends javax.swing.JFrame {
         bang3 = new CustomJTable(tableModel3);
         jPanel12 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        textTK = new javax.swing.JTextField();
         jButton16 = new javax.swing.JButton();
         locnguoidung = new javax.swing.JComboBox<>();
         jButton13 = new javax.swing.JButton();
@@ -530,7 +587,7 @@ public class admin extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TextspotTK = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         loctype = new javax.swing.JComboBox<>();
         jPanel6 = new javax.swing.JPanel();
@@ -584,10 +641,12 @@ public class admin extends javax.swing.JFrame {
         jPanel10.setLayout(new java.awt.CardLayout());
 
         thanhcongcu.setBackground(new java.awt.Color(44, 62, 80));
+        thanhcongcu.setForeground(new java.awt.Color(255, 255, 255));
 
-        Bthongtinxe.setBackground(new java.awt.Color(0, 90, 199));
-        Bthongtinxe.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        Bthongtinxe.setForeground(new java.awt.Color(0, 0, 0));
+        Bthongtinxe.setBackground(new java.awt.Color(40, 62, 80));
+        Bthongtinxe.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
+        Bthongtinxe.setForeground(new java.awt.Color(255, 255, 255));
+        Bthongtinxe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/car (2).png"))); // NOI18N
         Bthongtinxe.setText("Thông tin bãi đỗ xe");
         Bthongtinxe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -595,9 +654,10 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
-        Btimkiem.setBackground(new java.awt.Color(0, 90, 199));
-        Btimkiem.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        Btimkiem.setForeground(new java.awt.Color(0, 0, 0));
+        Btimkiem.setBackground(new java.awt.Color(40, 62, 80));
+        Btimkiem.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
+        Btimkiem.setForeground(new java.awt.Color(255, 255, 255));
+        Btimkiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/plus (1).png"))); // NOI18N
         Btimkiem.setText("Thêm và xóa bãi");
         Btimkiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -605,9 +665,10 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
-        Btra.setBackground(new java.awt.Color(0, 90, 199));
-        Btra.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        Btra.setForeground(new java.awt.Color(0, 0, 0));
+        Btra.setBackground(new java.awt.Color(40, 62, 80));
+        Btra.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
+        Btra.setForeground(new java.awt.Color(255, 255, 255));
+        Btra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/user (1).png"))); // NOI18N
         Btra.setText("Thông tin người dùng");
         Btra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -615,8 +676,10 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
-        Bthoat.setBackground(new java.awt.Color(0, 90, 199));
-        Bthoat.setForeground(new java.awt.Color(0, 0, 0));
+        Bthoat.setBackground(new java.awt.Color(255, 51, 51));
+        Bthoat.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
+        Bthoat.setForeground(new java.awt.Color(255, 255, 255));
+        Bthoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/logout.png"))); // NOI18N
         Bthoat.setText("Exit");
         Bthoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -624,16 +687,15 @@ public class admin extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quanlydoxe_img/3.png"))); // NOI18N
-
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/quanlydoxe_img/1.png"))); // NOI18N
         jLabel3.setText("CHỨC NĂNG");
 
-        jButton2.setBackground(new java.awt.Color(0, 90, 199));
-        jButton2.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setBackground(new java.awt.Color(40, 62, 80));
+        jButton2.setFont(new java.awt.Font("SansSerif", 0, 20)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/chart-area (1).png"))); // NOI18N
         jButton2.setText("Biểu đồ thống kê");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -650,18 +712,21 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(thanhcongcuLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(Bthoat, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(thanhcongcuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(thanhcongcuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, thanhcongcuLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(thanhcongcuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Btra, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Btimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Bthongtinxe, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
             .addGroup(thanhcongcuLayout.createSequentialGroup()
-                .addGroup(thanhcongcuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Bthongtinxe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
-                    .addComponent(Btimkiem, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
-                    .addComponent(Btra, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE))
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addComponent(Bthoat, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         thanhcongcuLayout.setVerticalGroup(
             thanhcongcuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -676,11 +741,9 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(Btra, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(202, 202, 202)
-                .addGroup(thanhcongcuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Bthoat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(7, 7, 7))
+                .addGap(195, 195, 195)
+                .addComponent(Bthoat, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jPanel10.add(thanhcongcu, "card2");
@@ -743,15 +806,22 @@ public class admin extends javax.swing.JFrame {
         jPanel12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 0, 30)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Thông tin người dùng");
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        textTK.setBackground(new java.awt.Color(255, 255, 255));
+        textTK.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
 
         jButton16.setBackground(new java.awt.Color(0, 0, 0));
         jButton16.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(255, 255, 255));
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/search.png"))); // NOI18N
         jButton16.setText("Tìm kiếm");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         locnguoidung.setBackground(new java.awt.Color(255, 255, 255));
         locnguoidung.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lọc người dùng", "Lọc người dùng đã thuê", "Lọc người dùng chưa thuê", "Lọc người dùng trống" }));
@@ -768,10 +838,10 @@ public class admin extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
                 .addComponent(locnguoidung, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textTK, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton16)
                 .addGap(17, 17, 17))
@@ -783,7 +853,7 @@ public class admin extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel7)
                     .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textTK, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(locnguoidung, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -792,6 +862,7 @@ public class admin extends javax.swing.JFrame {
         jButton13.setBackground(new java.awt.Color(40, 62, 82));
         jButton13.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/plus (1).png"))); // NOI18N
         jButton13.setText("Thêm");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -812,6 +883,7 @@ public class admin extends javax.swing.JFrame {
         xoacus.setBackground(new java.awt.Color(239, 68, 68));
         xoacus.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         xoacus.setForeground(new java.awt.Color(255, 255, 255));
+        xoacus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/xoa.png"))); // NOI18N
         xoacus.setText("Xóa");
         xoacus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -830,9 +902,9 @@ public class admin extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(JPtrbLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(xoacus, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton13)
+                .addGap(18, 18, 18)
+                .addComponent(xoacus, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton15)
                 .addGap(17, 17, 17))
@@ -843,11 +915,12 @@ public class admin extends javax.swing.JFrame {
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(JPtrbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(xoacus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPtrbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(xoacus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -989,16 +1062,23 @@ public class admin extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel10.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Thông tin bãi đỗ xe");
         jLabel10.setToolTipText("");
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        TextspotTK.setBackground(new java.awt.Color(255, 255, 255));
+        TextspotTK.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/search.png"))); // NOI18N
         jButton1.setText("Tìm kiếm");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         loctype.setBackground(new java.awt.Color(255, 255, 255));
         loctype.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -1019,7 +1099,7 @@ public class admin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(loctype, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextspotTK, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(36, 36, 36))
@@ -1032,7 +1112,7 @@ public class admin extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(TextspotTK, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel10))
                     .addComponent(loctype, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -1215,6 +1295,7 @@ public class admin extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/circle-parking (1).png"))); // NOI18N
         jButton4.setText("Khởi tạo bãi");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1225,6 +1306,7 @@ public class admin extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(40, 62, 82));
         jButton5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/plus (1).png"))); // NOI18N
         jButton5.setText("Thêm bãi");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1235,6 +1317,7 @@ public class admin extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(239, 68, 68));
         jButton9.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/anh/xoa.png"))); // NOI18N
         jButton9.setText("Xóa");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1253,10 +1336,10 @@ public class admin extends javax.swing.JFrame {
                     .addComponent(jScrollPane3)
                     .addGroup(JPtkbLayout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(297, 297, 297)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(279, 279, 279)
+                        .addComponent(jButton4)
+                        .addGap(19, 19, 19)
+                        .addComponent(jButton5)
                         .addGap(18, 18, 18)
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 13, Short.MAX_VALUE)))
@@ -1266,7 +1349,7 @@ public class admin extends javax.swing.JFrame {
             JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPtkbLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPtkbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1321,17 +1404,12 @@ public class admin extends javax.swing.JFrame {
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel16Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(Bdt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel16Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(Bdn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Brv, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Bdt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Bdn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Brv, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1342,6 +1420,7 @@ public class admin extends javax.swing.JFrame {
         jPanel25.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel23.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Số xe ra vào trong ngày");
 
         jLabel24.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
@@ -1559,7 +1638,8 @@ public class admin extends javax.swing.JFrame {
         jPanel18.setLayout(new java.awt.BorderLayout());
         jScrollPane4.setViewportView(jPanel18);
 
-        jLabel16.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Biểu đồ thống kê");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -1626,18 +1706,21 @@ public class admin extends javax.swing.JFrame {
         loadDulieulenBang2();
         CardLayout cl = (CardLayout) JPmc.getLayout();
         cl.show(JPmc, "JPttb");
+        changeButtonColor(Bthongtinxe);
     }//GEN-LAST:event_BthongtinxeActionPerformed
 
     private void BtimkiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtimkiemActionPerformed
         loadDulieulenBang1();
         CardLayout cl = (CardLayout) JPmc.getLayout();
         cl.show(JPmc, "JPtkb");
+        changeButtonColor(Btimkiem);
     }//GEN-LAST:event_BtimkiemActionPerformed
 
     private void BtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtraActionPerformed
         loadDulieulenBang3();
         CardLayout cl = (CardLayout) JPmc.getLayout();
         cl.show(JPmc, "JPtrb");
+        changeButtonColor(Btra);
         
     }//GEN-LAST:event_BtraActionPerformed
 
@@ -1658,6 +1741,7 @@ public class admin extends javax.swing.JFrame {
         CardLayout k = (CardLayout) jPanel17.getLayout();
         k.show(jPanel17, "trong");
         timeChart.createHourlyChart();
+        changeButtonColor(jButton2);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1765,6 +1849,16 @@ public class admin extends javax.swing.JFrame {
         cl.show(jPanel17, "trong");
         timeChart.createHourlyChart();
     }//GEN-LAST:event_BrvActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        String tukhoa = textTK.getText();
+        loadtklenBang3(tukhoa);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String tukhoa = TextspotTK.getText();
+        loadTKlenBang2(tukhoa);
+    }//GEN-LAST:event_jButton1ActionPerformed
 //
 //    /**
 //     * @param args the command line arguments
@@ -1815,6 +1909,7 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JPanel JPtkb;
     private javax.swing.JPanel JPtrb;
     private javax.swing.JPanel JPttb;
+    private javax.swing.JTextField TextspotTK;
     public javax.swing.JTable bang1;
     private javax.swing.JTable bang2;
     private javax.swing.JTable bang3;
@@ -1837,7 +1932,6 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1878,10 +1972,9 @@ public class admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JComboBox<String> locnguoidung;
     private javax.swing.JComboBox<String> loctype;
+    private javax.swing.JTextField textTK;
     private javax.swing.JButton xoacus;
     // End of variables declaration//GEN-END:variables
 
