@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class parkingSpot {
     protected static long nextID=1;
-    private long spotID=1;
+    private long spotID;
     private boolean tinhTrang = false; 
     private String chuXe;
     private long Gia=0;
@@ -31,6 +31,7 @@ public class parkingSpot {
         this.spotID = nextID++;
         saveNextIDToFile(); 
     }
+    
     public parkingSpot(spotType type) {
         loadNextIDFromFile(); 
         this.spotID = nextID++;
@@ -68,6 +69,15 @@ public class parkingSpot {
         this.chuXe = chuXe;
     }
 
+    public parkingSpot(long spotID, boolean tinhTrang, String chuXe,long Gia, spotType type) {
+        this.spotID = spotID;
+        this.tinhTrang = tinhTrang;
+        this.chuXe = chuXe;
+        this.Gia= Gia;
+        this.type = type;
+    }
+    
+    
     public parkingSpot(long spotID, boolean tinhTrang, String chuXe, long Gia) {
         this.spotID = spotID;
         this.tinhTrang = tinhTrang;
@@ -113,6 +123,9 @@ public class parkingSpot {
 
     public void setType(spotType type) {
         this.type = type;
+    }
+    public Boolean getTinhTrang() {
+        return tinhTrang;
     }
     
 }
