@@ -82,6 +82,7 @@ com\mycompany\quanlybaidoxe\quanlydoxe\User.class
 com\mycompany\quanlybaidoxe\timkiembai\Luachonbai$1.class
 com\mycompany\quanlybaidoxe\quanlydoxe\baoloi.class
 com\mycompany\quanlybaidoxe\giaodienAdmin\admin$5.class
+com\mycompany\quanlybaidoxe\giaodienAdmin\themSpot$5$1.class
 com\mycompany\quanlybaidoxe\giaodienAdmin\khoitaothanhcong$1.class
 com\mycompany\quanlybaidoxe\LogIn\LogIn$5.class
 com\mycompany\quanlybaidoxe\maxacnhan\xacnhanQr$1.class
@@ -109,6 +110,7 @@ com\mycompany\quanlybaidoxe\giaodienAdmin\themSpot.class
 com\mycompany\quanlybaidoxe\LogIn\canhbaousername.class
 com\mycompany\quanlybaidoxe\quanlydoxe\Giaodienchinh$17.class
 com\mycompany\quanlybaidoxe\giaodienAdmin\admin$8.class
+com\mycompany\quanlybaidoxe\giaodienAdmin\themSpot$5.class
 com\mycompany\quanlybaidoxe\giaodienAdmin\admin$16.class
 com\mycompany\quanlybaidoxe\LogIn\BackgroundPanel.class
 com\mycompany\quanlybaidoxe\maxacnhan\xacnhanQr$QRCodeDisplay.class
