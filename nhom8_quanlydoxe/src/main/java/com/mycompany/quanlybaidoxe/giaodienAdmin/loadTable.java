@@ -1,5 +1,6 @@
 package com.mycompany.quanlybaidoxe.giaodienAdmin;
 
+import com.mycompany.quanlybaidoxe.trabai.dinhdangso;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.parsers.DocumentBuilder;
@@ -10,6 +11,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import java.awt.*;
 import java.io.File;
+import com.mycompany.quanlybaidoxe.trabai.Number;
+import com.mycompany.quanlybaidoxe.trabai.dinhdangso;
+
 
 /**
  *
@@ -37,8 +41,11 @@ public class loadTable {
                     String chuXe = spotElement.getElementsByTagName("chuXe").item(0).getTextContent();
                     String gia = spotElement.getElementsByTagName("Gia").item(0).getTextContent();
                     String type = spotElement.getElementsByTagName("type").item(0).getTextContent();
-
-                    tableModel.addRow(new Object[]{spotID, tinhTrang, chuXe, gia,type});
+                    
+                    int sotien = Integer.parseInt(gia);
+                    Number tongst = new dinhdangso();
+                    String sotien1 = tongst.chuyenso(sotien);
+                    tableModel.addRow(new Object[]{spotID, tinhTrang, chuXe, sotien1,type});
                 }
             }
         } catch (Exception e) {

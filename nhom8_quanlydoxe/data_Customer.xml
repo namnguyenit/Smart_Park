@@ -1,21 +1,767 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><Customers>
+                                                      
+  
+  
+  
+  
+  
+          
+  
+  
+  
+  
+  
+        
+  
+  
+  
+  
+      
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+          
+  
+  
+  
+  
+  
+        
+  
+  
+  
+  
+      
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
   <Customer>
+                                
+    
+    
+    
+    
+    
+    
     <customerId>CUS1001</customerId>
+                                
+    
+    
+    
+    
+    
+    
     <name>1</name>
+                                
+    
+    
+    
+    
+    
+    
     <phoneNumber>null</phoneNumber>
+                                
+    
+    
+    
+    
+    
+    
     <email>xeThoso</email>
-    <bienSo>30V-123.12</bienSo>
+                                
+    
+    
+    
+    
+    
+    
+    <bienSo>12V-123.12</bienSo>
+                                
+    
+    
+    
+    
+    
+    
+    <spotId>null</spotId>
+                                
+    
+    
+    
+    
+    
+    
+    <trangThaiXe>false</trangThaiXe>
+                                
+    
+    
+    
+    
+    
+    
+    <qrCode>false</qrCode>
+                                
+    
+    
+    
+    
+    
+    
+    <username>1</username>
+                                
+    
+    
+    
+    
+    
+    
+    <password>a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=</password>
+                                
+    
+    
+    
+    
+    
+    
+    <gio>null</gio>
+                                
+    
+    
+    
+    
+    
+    
+    <phut>null</phut>
+                                
+    
+    
+    
+    
+    
+    
+    <dayv>null</dayv>
+                                
+    
+    
+    
+    
+    
+    
+    <giov>null</giov>
+                                
+    
+    
+    
+    
+    
+    
+    <phutv>null</phutv>
+                                
+    
+    
+    
+    
+    
+    
+    <loaiDo>xeThoso</loaiDo>
+                                
+    
+    
+    
+    
+    
+    
+    <solan>6</solan>
+                              
+  
+  
+  
+  
+  
+  
+  </Customer>
+              
+  
+  
+  
+  
+  
+  
+  <Customer>
+                            
+    
+    
+    
+    
+    
+    <customerId>CUS1002</customerId>
+                            
+    
+    
+    
+    
+    
+    <name>12</name>
+                            
+    
+    
+    
+    
+    
+    <phoneNumber>null</phoneNumber>
+                            
+    
+    
+    
+    
+    
+    <email>null</email>
+                            
+    
+    
+    
+    
+    
+    <bienSo>null</bienSo>
+                            
+    
+    
+    
+    
+    
+    <spotId>null</spotId>
+                            
+    
+    
+    
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                            
+    
+    
+    
+    
+    
+    <qrCode>null</qrCode>
+                            
+    
+    
+    
+    
+    
+    <username>12</username>
+                            
+    
+    
+    
+    
+    
+    <password>a1HUMd9dfxQcvs7M957fPdhhw7QGnwsRZho+76y7qRg=</password>
+                            
+    
+    
+    
+    
+    
+    <gio>null</gio>
+                            
+    
+    
+    
+    
+    
+    <phut>null</phut>
+                            
+    
+    
+    
+    
+    
+    <dayv>null</dayv>
+                            
+    
+    
+    
+    
+    
+    <giov>null</giov>
+                            
+    
+    
+    
+    
+    
+    <phutv>null</phutv>
+                            
+    
+    
+    
+    
+    
+    <loaiDo>null</loaiDo>
+                            
+    
+    
+    
+    
+    
+    <solan>null</solan>
+                          
+  
+  
+  
+  
+  
+  </Customer>
+            
+  
+  
+  
+  
+  
+  <Customer>
+                        
+    
+    
+    
+    
+    <customerId>CUS1003</customerId>
+                        
+    
+    
+    
+    
+    <name>123</name>
+                        
+    
+    
+    
+    
+    <phoneNumber>null</phoneNumber>
+                        
+    
+    
+    
+    
+    <email>null</email>
+                        
+    
+    
+    
+    
+    <bienSo>null</bienSo>
+                        
+    
+    
+    
+    
+    <spotId>null</spotId>
+                        
+    
+    
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                        
+    
+    
+    
+    
+    <qrCode>null</qrCode>
+                        
+    
+    
+    
+    
+    <username>123</username>
+                        
+    
+    
+    
+    
+    <password>pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=</password>
+                        
+    
+    
+    
+    
+    <gio>null</gio>
+                        
+    
+    
+    
+    
+    <phut>null</phut>
+                        
+    
+    
+    
+    
+    <dayv>null</dayv>
+                        
+    
+    
+    
+    
+    <giov>null</giov>
+                        
+    
+    
+    
+    
+    <phutv>null</phutv>
+                        
+    
+    
+    
+    
+    <loaiDo>null</loaiDo>
+                        
+    
+    
+    
+    
+    <solan>null</solan>
+                      
+  
+  
+  
+  
+  </Customer>
+          
+  
+  
+  
+  
+  <Customer>
+                    
+    
+    
+    
+    <customerId>CUS1004</customerId>
+                    
+    
+    
+    
+    <name>6</name>
+                    
+    
+    
+    
+    <phoneNumber>null</phoneNumber>
+                    
+    
+    
+    
+    <email>null</email>
+                    
+    
+    
+    
+    <bienSo>null</bienSo>
+                    
+    
+    
+    
+    <spotId>null</spotId>
+                    
+    
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                    
+    
+    
+    
+    <qrCode>null</qrCode>
+                    
+    
+    
+    
+    <username>6</username>
+                    
+    
+    
+    
+    <password>5/bAEXdujbfNMwtUF0/Xb30CFrYSOHpf/PuB5vCRloM=</password>
+                    
+    
+    
+    
+    <gio>null</gio>
+                    
+    
+    
+    
+    <phut>null</phut>
+                    
+    
+    
+    
+    <dayv>null</dayv>
+                    
+    
+    
+    
+    <giov>null</giov>
+                    
+    
+    
+    
+    <phutv>null</phutv>
+                    
+    
+    
+    
+    <loaiDo>null</loaiDo>
+                    
+    
+    
+    
+    <solan>null</solan>
+                  
+  
+  
+  
+  </Customer>
+        
+  
+  
+  
+  <Customer>
+                
+    
+    
+    <customerId>CUS1005</customerId>
+                
+    
+    
+    <name>67</name>
+                
+    
+    
+    <phoneNumber>null</phoneNumber>
+                
+    
+    
+    <email>null</email>
+                
+    
+    
+    <bienSo>null</bienSo>
+                
+    
+    
+    <spotId>null</spotId>
+                
+    
+    
+    <trangThaiXe>null</trangThaiXe>
+                
+    
+    
+    <qrCode>null</qrCode>
+                
+    
+    
+    <username>67</username>
+                
+    
+    
+    <password>SdGA7PVhMoGVcb852bezQlIqKsbSPBQY0zOCUb/kacg=</password>
+                
+    
+    
+    <gio>null</gio>
+                
+    
+    
+    <phut>null</phut>
+                
+    
+    
+    <dayv>null</dayv>
+                
+    
+    
+    <giov>null</giov>
+                
+    
+    
+    <phutv>null</phutv>
+                
+    
+    
+    <loaiDo>null</loaiDo>
+                
+    
+    
+    <solan>null</solan>
+              
+  
+  
+  </Customer>
+      
+  
+  
+  <Customer>
+            
+    
+    <customerId>CUS1006</customerId>
+            
+    
+    <name>tyty</name>
+            
+    
+    <phoneNumber>null</phoneNumber>
+            
+    
+    <email>null</email>
+            
+    
+    <bienSo>null</bienSo>
+            
+    
+    <spotId>null</spotId>
+            
+    
+    <trangThaiXe>null</trangThaiXe>
+            
+    
+    <qrCode>null</qrCode>
+            
+    
+    <username>tytyt</username>
+            
+    
+    <password>pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=</password>
+            
+    
+    <gio>null</gio>
+            
+    
+    <phut>null</phut>
+            
+    
+    <dayv>null</dayv>
+            
+    
+    <giov>null</giov>
+            
+    
+    <phutv>null</phutv>
+            
+    
+    <loaiDo>null</loaiDo>
+            
+    
+    <solan>null</solan>
+          
+  
+  </Customer>
+    
+  
+  <Customer>
+        
+    <customerId>CUS1007</customerId>
+        
+    <name>ppp</name>
+        
+    <phoneNumber>null</phoneNumber>
+        
+    <email>null</email>
+        
+    <bienSo>null</bienSo>
+        
+    <spotId>null</spotId>
+        
+    <trangThaiXe>null</trangThaiXe>
+        
+    <qrCode>null</qrCode>
+        
+    <username>ppp</username>
+        
+    <password>xCiWKbCLxNYUEaqm1tSgw8X4wehI4oKXbim2vtWu7cc=</password>
+        
+    <gio>null</gio>
+        
+    <phut>null</phut>
+        
+    <dayv>null</dayv>
+        
+    <giov>null</giov>
+        
+    <phutv>null</phutv>
+        
+    <loaiDo>null</loaiDo>
+        
+    <solan>null</solan>
+      
+  </Customer>
+  
+  <Customer>
+    <customerId>CUS1008</customerId>
+    <name>2</name>
+    <phoneNumber>null</phoneNumber>
+    <email>xeGanmay</email>
+    <bienSo>30A-123.99</bienSo>
     <spotId>null</spotId>
     <trangThaiXe>false</trangThaiXe>
     <qrCode>false</qrCode>
-    <username>1</username>
-    <password>a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=</password>
+    <username>2</username>
+    <password>1HNeOiZeFu7gP1lxi5tdAwGcB9i2xR+Q2jpmbuwTqzU=</password>
     <gio>null</gio>
     <phut>null</phut>
     <dayv>null</dayv>
     <giov>null</giov>
     <phutv>null</phutv>
-    <loaiDo>xeThoso</loaiDo>
+    <loaiDo>xeGanmay</loaiDo>
     <solan>1</solan>
   </Customer>
 </Customers>

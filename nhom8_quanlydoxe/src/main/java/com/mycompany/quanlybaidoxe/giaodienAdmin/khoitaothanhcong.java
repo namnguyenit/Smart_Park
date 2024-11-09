@@ -16,6 +16,8 @@ public class khoitaothanhcong extends javax.swing.JDialog {
     public khoitaothanhcong(khoitaoform parent) {
         super(parent, true);
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
