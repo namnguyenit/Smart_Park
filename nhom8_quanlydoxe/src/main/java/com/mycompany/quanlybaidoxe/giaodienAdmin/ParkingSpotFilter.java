@@ -88,6 +88,48 @@ public class ParkingSpotFilter {
     }
     
     
+    // hàm tìm kiếm theo từ khóa trong parking spot
+    public static ArrayList<parkingSpot> timKiem(String tuKhoa, String filePath) {
+    ArrayList<parkingSpot> parkingSpotList = new ArrayList<>();
+
+    try {
+        File xmlFile = new File(filePath);
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        Document doc = dBuilder.parse(xmlFile);
+
+        doc.getDocumentElement().normalize();
+
+        NodeList nList = doc.getElementsByTagName("parkingSpot");
+
+        for (int i = 0; i < nList.getLength(); i++) {
+            Node node = nList.item(i);
+
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                Element element = (Element) node;
+
+                String spotID = element.getElementsByTagName("spotID").item(0).getTextContent();
+                String tinhTrang = element.getElementsByTagName("tinhTrang").item(0).getTextContent();
+                String chuXe = element.getElementsByTagName("chuXe").item(0).getTextContent();
+                String gia = element.getElementsByTagName("Gia").item(0).getTextContent();
+                String type = element.getElementsByTagName("type").item(0).getTextContent();
+
+                // Kiểm tra nếu từ khóa xuất hiện trong bất kỳ trường nào
+                if (spotID.contains(tuKhoa) || tinhTrang.contains(tuKhoa) || chuXe.contains(tuKhoa) 
+                    || gia.contains(tuKhoa) || type.contains(tuKhoa)) {
+                    parkingSpotList.add(new parkingSpot(Long.parseLong(spotID), 
+                        stringToBoolean(tinhTrang), chuXe, Long.parseLong(gia), stringToSpotType(type)));
+                }
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return parkingSpotList;
+}
+    
+    
     
     private static spotType stringToSpotType(String str) {
         try {
